@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.15",
+    "concurrently": "^8.2.2",
+    "flowbite": "^2.2.0",
+    "postcss-import": "^16.1.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.19",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "dev:css": "npx tailwindcss -i ./src/styles/input.css -o ./styles/styles.css --watch",
+    "build:css": "npx tailwindcss -i ./src/styles/input.css -o ./styles/styles.css --minify",
+    "ts:build": "tsc -p tsconfig.json --watch",
+    "dev": "concurrently \"bun run dev:css\" \"bun run ts:build\""
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  }
+}

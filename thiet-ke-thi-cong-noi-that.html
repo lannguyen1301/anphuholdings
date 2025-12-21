@@ -1,0 +1,2115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+  <!-- CSS noUiSlider -->
+  <link href="https://cdn.jsdelivr.net/npm/nouislider@15.6.1/dist/nouislider.min.css" rel="stylesheet" />
+
+  <style>
+    .noUi-handle {
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      border: 1px solid #1e3a8a;
+      background: white;
+      box-shadow: 0 0 0 2px #eff6ff;
+      transition: all 0.3s ease;
+    }
+
+    .noUi-handle:hover {
+      background: #e0f2fe;
+    }
+
+    .noUi-connect {
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar started -->
+  <!-- Header Nháp -->
+  <header class="sticky left-0 top-0 z-50 flex h-nav-2 items-center bg-white shadow-sm">
+    <nav class="container flex items-center justify-between gap-2 px-3 2xl:px-0">
+      <div class="shrink-0">
+        <a href="#">
+          <img src="assets/logo/anphu-holdings.jpg" alt="Homelist" class="shrink-0" />
+        </a>
+      </div>
+
+      <!-- Navbar -->
+      <div class="flex flex-1 items-center justify-between gap-x-2 gap-x-4 text-[15px] text-nature-500">
+        <ul
+          class="mr-2.5 flex hidden flex-1 items-center justify-between gap-x-3 text-[15px] font-semibold hover:*:text-primary hover:*:duration-300 md:flex lg:gap-x-2 lg:text-[14px] xl:space-x-5">
+          <!-- Văn phòng cho thuê -->
+          <li role="button" id="rentDropdownButton" data-dropdown-toggle="rent-dropdown-hover"
+            data-dropdown-trigger="hover">
+            <a class="group relative" role="button" href="#">Cho thuê văn phòng
+              <svg class="svg-inline--fa fa-chevron-down text-sm font-normal" aria-hidden="true" focusable="false"
+                data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512" data-fa-i2svg="">
+                <path fill="currentColor"
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                </path>
+              </svg><!-- <i class="text-sm font-normal fa-solid fa-chevron-down"></i> Font Awesome fontawesome.com -->
+              <div aria-hidden="true"
+                class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]">
+              </div>
+            </a>
+          </li>
+
+          <div id="rent-dropdown-hover" class="w-60.5 z-10 hidden rounded-xl bg-white shadow" style="
+                position: absolute;
+                inset: 0px auto auto 0px;
+                margin: 0px;
+                transform: translate(555px, 61px);
+              " data-popper-placement="bottom">
+            <ul aria-labelledby="rentDropdownButton"
+              class="grid w-full grid-cols-3 gap-2 p-2 text-[12px] font-semibold text-gray-500 *:px-5 *:py-2.5">
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 1</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 2</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 3</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 4</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 5</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 7</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 8</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 9</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 10</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 11</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận 12</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận Bình Thạnh</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận Gò Vấp</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận Tân Bình</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận Tân Phú</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận Bình Chánh</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng cho thuê Quận Thủ Đức</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Văn phòng cho thuê -->
+
+          <!-- Văn phòng theo phường -->
+          <li role="button" id="wardDropdownButton" data-dropdown-toggle="ward-dropdown-hover"
+            data-dropdown-trigger="hover">
+            <a class="group relative" href="#">Văn phòng theo phường
+              <svg class="svg-inline--fa fa-chevron-down text-sm font-normal" aria-hidden="true" focusable="false"
+                data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512" data-fa-i2svg="">
+                <path fill="currentColor"
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                </path>
+              </svg><!-- <i class="text-sm font-normal fa-solid fa-chevron-down"></i> Font Awesome fontawesome.com -->
+              <div aria-hidden="true"
+                class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]">
+              </div>
+            </a>
+          </li>
+
+          <div id="ward-dropdown-hover" class="w-60.5 z-10 hidden rounded-xl bg-white shadow" style="
+                position: absolute;
+                inset: 0px auto auto 0px;
+                margin: 0px;
+                transform: translate(773px, 61px);
+              " data-popper-placement="bottom">
+            <ul aria-labelledby="wardDropdownButton"
+              class="grid w-full grid-cols-3 gap-2 p-2 text-[12px] font-semibold text-gray-500 *:px-5 *:py-2.5">
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Sài Gòn - Quận 1</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Tân Định - Quận 1</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Bến Thành - Quận 1</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Cầu Ông Lãnh - Quận 1</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Bàn Cờ - Quận 3</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Xuân Hòa - Quận 3</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Võ Thị Sáu - Quận 3</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Khánh Hội - Quận 4</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Bến Vân Đồn - Quận 4</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Chợ Lớn - Quận 5</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Hùng Vương - Quận 5</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Tân Hưng - Quận 7</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Phú Mỹ Hưng - Quận 7</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Tân Phong – Tân Quy - Quận 7</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Nhật Tảo Quận 10</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Đồng Tiến - Quận 10</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Vĩnh Viễn - Quận 10</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Hòa Bình - Quận 11</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Thiên Hộ - Quận 11</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Lạc Long Quân -Quận 11</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Thanh Đa - Quận Bình Thạnh</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Văn Thánh - Quận Bình Thạnh</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Bạch Đằng - Quận Bình Thạnh</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Bình Lợi - Quận Bình Thạnh</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Bình Tân - Quận Tân Bình</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Tân Tạo - Quận Tân Bình</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường An Lạc - Quận Tân Bình</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Bình Trị Đông - Quận Tân Bình</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường An Hội – Thống Nhất - Quận Tân phú</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Tân Quý – Tân Sơn Nhì - Quận Tân phú</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường Phú Thọ Hòa – Hòa Thạnh - Quận Tân phú</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường An Hội – Thống Nhất - Quận Tân phú</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường An Hội – Thống Nhất - Quận Tân phú</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường An Hội – Thống Nhất - Quận Tân phú</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Phường An Hội – Thống Nhất - Quận Tân phú</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Văn phòng theo phường -->
+
+          <!-- Văn phòng theo hạng -->
+          <li role="button" id="gradeDropdownButton" data-dropdown-toggle="grade-dropdown-hover"
+            data-dropdown-trigger="hover">
+            <a class="group relative" href="#">Văn phòng theo hạng
+              <svg class="svg-inline--fa fa-chevron-down text-sm font-normal" aria-hidden="true" focusable="false"
+                data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512" data-fa-i2svg="">
+                <path fill="currentColor"
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                </path>
+              </svg><!-- <i class="text-sm font-normal fa-solid fa-chevron-down"></i> Font Awesome fontawesome.com -->
+              <div aria-hidden="true"
+                class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]">
+              </div>
+            </a>
+          </li>
+
+          <div id="grade-dropdown-hover" class="w-60.5 z-10 hidden rounded-xl bg-white shadow"
+            data-popper-placement="bottom" style="
+                position: absolute;
+                inset: 0px auto auto 0px;
+                margin: 0px;
+                transform: translate(1100px, 435px);
+              ">
+            <ul aria-labelledby="gradeDropdownButton"
+              class="grid w-full grid-cols-3 gap-2 p-2 text-[12px] font-semibold text-gray-500 *:px-5 *:py-2.5">
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng hạng A</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng hạng B</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng hạng C</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng hạng giá rẻ</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Văn phòng theo hạng -->
+
+          <!-- Văn phòng trọn gói -->
+          <li role="button" id="serviceDropdownButton" data-dropdown-toggle="service-dropdown-hover"
+            data-dropdown-trigger="hover">
+            <a class="group relative" href="#">Văn phòng trọn gói
+              <svg class="svg-inline--fa fa-chevron-down text-sm font-normal" aria-hidden="true" focusable="false"
+                data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512" data-fa-i2svg="">
+                <path fill="currentColor"
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                </path>
+              </svg><!-- <i class="text-sm font-normal fa-solid fa-chevron-down"></i> Font Awesome fontawesome.com -->
+              <div aria-hidden="true"
+                class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]">
+              </div>
+            </a>
+          </li>
+
+          <div id="service-dropdown-hover" class="w-60.5 z-10 hidden rounded-xl bg-white shadow"
+            data-popper-placement="bottom" style="
+                position: absolute;
+                inset: 0px auto auto 0px;
+                margin: 0px;
+                transform: translate(1201px, 61px);
+              ">
+            <ul aria-labelledby="serviceDropdownButton"
+              class="grid w-full grid-cols-3 gap-2 p-2 text-[12px] font-semibold text-gray-500 *:px-5 *:py-2.5">
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận 1</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận 3</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận 4</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận 5</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận 7</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận 10</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận Bình Thạnh</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận Tân Bình</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận Thủ Đức</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận Phú Nhuận</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="#">Văn phòng trọn gói Quận Gò Vấp</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Văn phòng trọn gói -->
+
+          <!-- Blog -->
+          <!-- <li>
+            <a class="relative group" href="blogs.html">Blogs
+              <div aria-hidden="true"
+                class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]">
+              </div>
+            </a>
+          </li> -->
+
+          <!-- About -->
+          <li role="button" id="pagesDropdownButton" data-dropdown-toggle="pages-dropdown-hover"
+            data-dropdown-trigger="hover">
+            <a class="group relative" href="#">About
+              <svg class="svg-inline--fa fa-chevron-down text-sm font-normal" aria-hidden="true" focusable="false"
+                data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512" data-fa-i2svg="">
+                <path fill="currentColor"
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                </path>
+              </svg><!-- <i class="text-sm font-normal fa-solid fa-chevron-down"></i> Font Awesome fontawesome.com -->
+              <div aria-hidden="true"
+                class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]">
+              </div>
+            </a>
+          </li>
+
+          <div id="pages-dropdown-hover" class="z-10 hidden w-60 rounded-xl bg-white shadow"
+            data-popper-placement="bottom" style="
+                position: absolute;
+                inset: 0px auto auto 0px;
+                margin: 0px;
+                transform: translate(1350px, 61px);
+              ">
+            <ul aria-labelledby="pagesDropdownButton" class="w-full p-2.5 font-semibold text-gray-700 *:px-5 *:py-2.5">
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="blogs.html">Blog List</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="blog.html">Blog Details</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="property2.html">FAQs</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="map-view-1.html">Project List</a>
+              </li>
+              <li class="group w-full overflow-hidden rounded-lg hover:bg-primary hover:text-white">
+                <a class="relative transition-all duration-500 before:absolute before:left-0 before:top-1/2 before:mr-1.5 before:-translate-x-10 before:-translate-y-1/2 before:text-white before:content-['-'] group-hover:pl-5 group-hover:before:translate-x-0 group-hover:before:delay-150"
+                  href="map-view-2.html">Project Details</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <li>
+            <a class="group relative" href="contact.html">Contacts
+              <div aria-hidden="true"
+                class="absolute top-6 h-[2px] w-0 bg-gradient-to-r from-primary to-primary-400 transition-all duration-500 group-hover:w-[40px]">
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="flex shrink-0 items-center gap-x-2">
+          <button data-modal-target="search-modal" data-modal-toggle="search-modal" type="button"
+            class="transition duration-300 hover:text-primary">
+            <svg class="svg-inline--fa fa-magnifying-glass text-xl text-nature-600 duration-300 hover:text-primary"
+              aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+              <path fill="currentColor"
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+              </path>
+            </svg><!-- <i class="text-xl duration-300 fa-solid fa-magnifying-glass text-nature-600 hover:text-primary"></i> Font Awesome fontawesome.com -->
+          </button>
+          <button class="hidden size-[60px] bg-primary text-white md:block" type="button"
+            data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example"
+            data-drawer-placement="right" aria-controls="drawer-right-example">
+            <svg class="svg-inline--fa fa-lines-leaning text-2xl" aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="lines-leaning" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+              data-fa-i2svg="">
+              <path fill="currentColor"
+                d="M190.4 74.1c5.6-16.8-3.5-34.9-20.2-40.5s-34.9 3.5-40.5 20.2l-128 384c-5.6 16.8 3.5 34.9 20.2 40.5s34.9-3.5 40.5-20.2l128-384zm70.9-41.7c-17.4-2.9-33.9 8.9-36.8 26.3l-64 384c-2.9 17.4 8.9 33.9 26.3 36.8s33.9-8.9 36.8-26.3l64-384c2.9-17.4-8.9-33.9-26.3-36.8zM352 32c-17.7 0-32 14.3-32 32l0 384c0 17.7 14.3 32 32 32s32-14.3 32-32l0-384c0-17.7-14.3-32-32-32z">
+              </path>
+            </svg><!-- <i class="text-2xl fa-solid fa-lines-leaning"></i> Font Awesome fontawesome.com -->
+          </button>
+          <button class="md:hidden" type="button" data-drawer-target="responsive-menu"
+            data-drawer-show="responsive-menu" aria-controls="responsive-menu">
+            <svg class="size-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+              height="200px" width="200px" xmlns="http://www.w3.org/2000/svg">
+              <path fill="none" d="M0 0h24v24H0V0z"></path>
+              <path
+                d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Nháp -->
+  <!-- Navbar ended -->
+  <section class="bg-primary-10">
+    <div class="h-auto w-full bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/layer.svg')">
+      <div
+        class="container flex h-[225px] flex-col items-center justify-center sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px]">
+        <h1 class="common-hero-heading">
+          Văn phòng cho thuê Phường Tân Định
+        </h1>
+
+        <div class="flex" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-2">
+            <li class="inline-flex items-center">
+              <a href="#"
+                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
+                <i class="fa-solid fa-house me-2.5 h-3 w-3"></i>
+                Home
+              </a>
+            </li>
+
+            <li aria-current="page">
+              <div class="flex items-center">
+                <i class="fa-solid fa-chevron-right mx-1 h-3 w-3 text-gray-400"></i>
+                <span class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2">Văn phòng cho thuê
+                  Phường Tân Định
+                </span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Started -->
+  <section class="container mx-auto max-w-screen-xl"></section>
+  <div class="w-full bg-white">
+    <section class="py-16">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          <div class="group relative" data-aos="fade-right">
+            <div
+              class="absolute -inset-4 rotate-3 transform rounded-2xl bg-yellow-500/20 transition-transform group-hover:rotate-0">
+            </div>
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img src="../template/Default/assets/images/khong-co-kinh-nghiem-thiet-ke-thi-cong-noi-that.jpg"
+                alt="Rắc rối"
+                class="h-auto w-full transform object-cover transition-transform duration-700 group-hover:scale-105"
+                onerror="this.src = 'https://placehold.co/600x400?text=Image'" />
+            </div>
+          </div>
+
+          <div data-aos="fade-left">
+            <h2 class="mb-6 text-3xl font-bold leading-tight text-primary md:text-4xl">
+              <span class="text-secondary">Không có kinh nghiệm</span> thiết
+              kế, bạn sẽ gặp
+              <span class="border-b-2 border-red-500 text-red-600">rắc rối</span>
+              gì?
+            </h2>
+
+            <div class="space-y-4">
+              <div
+                class="flex items-start gap-4 rounded-xl border border-gray-100 bg-gray-50 p-4 transition-all hover:shadow-lg">
+                <div
+                  class="bg-navy-100 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-xl text-primary">
+                  <i class="fa-solid fa-person-digging"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary">Mới thuê văn phòng</h4>
+                  <p class="text-sm text-gray-600">
+                    Nhưng không biết bắt đầu từ đâu.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 rounded-xl border border-gray-100 bg-gray-50 p-4 transition-all hover:shadow-lg">
+                <div
+                  class="bg-navy-100 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-xl text-primary">
+                  <i class="fa-solid fa-ruler-combined"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary">
+                    Không gian kém khoa học
+                  </h4>
+                  <p class="text-sm text-gray-600">
+                    Lãng phí diện tích, vận hành khó khăn.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 rounded-xl border border-gray-100 bg-gray-50 p-4 transition-all hover:shadow-lg">
+                <div
+                  class="bg-navy-100 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-xl text-primary">
+                  <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary">Phát sinh chi phí</h4>
+                  <p class="text-sm text-gray-600">
+                    Thi công kéo dài, sai sót tốn kém.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="overflow-hidden bg-white py-16">
+          <div class="container mx-auto max-w-screen-xl px-4">
+            <div class="mb-16 text-center" data-aos="fade-down">
+              <h2 class="text-3xl font-bold uppercase leading-tight text-blue-900 md:text-4xl">
+                Lợi ích từ giải pháp toàn diện của
+                <span class="text-yellow-600">Office Saigon</span>
+              </h2>
+              <div class="mx-auto mt-4 h-1.5 w-32 rounded bg-yellow-500"></div>
+            </div>
+
+            <div class="space-y-20">
+              <div class="group grid grid-cols-1 items-center gap-10 lg:grid-cols-2" data-aos="fade-up">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-4 -rotate-2 transform rounded-2xl bg-blue-100 transition-transform duration-500 group-hover:rotate-0">
+                  </div>
+                  <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                    <img src="../template/Default/assets/images/loiich1.jpg" alt="Không đủ thời gian tìm văn phòng"
+                      class="h-auto w-full transform object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy" />
+                  </div>
+                </div>
+                <div class="pl-0 lg:pl-10">
+                  <div
+                    class="mb-4 inline-block rounded-full bg-blue-900 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                    Vấn đề #1
+                  </div>
+                  <h3 class="mb-4 text-2xl font-bold leading-snug text-gray-800">
+                    "Không đủ thời gian và nguồn lực để khảo sát tìm văn
+                    phòng"
+                  </h3>
+                  <p class="text-lg leading-relaxed text-gray-600">
+                    Doanh nghiệp thường thiếu đội ngũ chuyên trách. Việc tìm
+                    kiếm văn phòng phù hợp về diện tích, giá cả và vị trí đòi
+                    hỏi quá nhiều công sức, làm gián đoạn hoạt động kinh doanh
+                    cốt lõi.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex justify-center opacity-30">
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-blue-300 to-transparent"></div>
+              </div>
+
+              <div class="group grid grid-cols-1 items-center gap-10 lg:grid-cols-2" data-aos="fade-up">
+                <div class="order-2 pr-0 lg:order-1 lg:pr-10">
+                  <div
+                    class="mb-4 inline-block rounded-full bg-yellow-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                    Vấn đề #2
+                  </div>
+                  <h3 class="mb-4 text-2xl font-bold leading-snug text-gray-800">
+                    "Khó khăn trong việc so sánh giá và chất lượng"
+                  </h3>
+                  <p class="text-lg leading-relaxed text-gray-600">
+                    Giá thuê biến động tùy thuộc vào vị trí và tiện ích. Doanh
+                    nghiệp dễ rơi vào ma trận giá cả, lo lắng liệu mình có
+                    đang trả mức phí xứng đáng với chất lượng thực tế hay
+                    không.
+                  </p>
+                </div>
+                <div class="relative order-1 lg:order-2">
+                  <div
+                    class="absolute -inset-4 rotate-2 transform rounded-2xl bg-yellow-100 transition-transform duration-500 group-hover:rotate-0">
+                  </div>
+                  <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                    <img src="../template/Default/assets/images/loiich2.jpg" alt="So sánh giá thuê văn phòng"
+                      class="h-auto w-full transform object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-center opacity-30">
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-blue-300 to-transparent"></div>
+              </div>
+
+              <div class="group grid grid-cols-1 items-center gap-10 lg:grid-cols-2" data-aos="fade-up">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-4 -rotate-2 transform rounded-2xl bg-blue-100 transition-transform duration-500 group-hover:rotate-0">
+                  </div>
+                  <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                    <img src="../template/Default/assets/images/loiich3.jpg" alt="Rủi ro pháp lý hợp đồng"
+                      class="h-auto w-full transform object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy" />
+                  </div>
+                </div>
+                <div class="pl-0 lg:pl-10">
+                  <div
+                    class="mb-4 inline-block rounded-full bg-blue-900 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                    Vấn đề #3
+                  </div>
+                  <h3 class="mb-4 text-2xl font-bold leading-snug text-gray-800">
+                    "Rủi ro pháp lý khi ký hợp đồng thuê"
+                  </h3>
+                  <p class="text-lg leading-relaxed text-gray-600">
+                    Hợp đồng thuê văn phòng chứa đựng nhiều thuật ngữ pháp lý
+                    phức tạp. Thiếu sự tư vấn chuyên sâu dễ dẫn đến các điều
+                    khoản bất lợi và rủi ro tài chính dài hạn cho doanh
+                    nghiệp.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex justify-center opacity-30">
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-blue-300 to-transparent"></div>
+              </div>
+
+              <div class="group grid grid-cols-1 items-center gap-10 lg:grid-cols-2" data-aos="fade-up">
+                <div class="order-2 pr-0 lg:order-1 lg:pr-10">
+                  <div
+                    class="mb-4 inline-block rounded-full bg-yellow-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                    Vấn đề #4
+                  </div>
+                  <h3 class="mb-4 text-2xl font-bold leading-snug text-gray-800">
+                    "Chọn sai vị trí ảnh hưởng hiệu suất nhân viên"
+                  </h3>
+                  <p class="text-lg leading-relaxed text-gray-600">
+                    Vị trí ảnh hưởng trực tiếp đến việc di chuyển và tâm lý
+                    nhân viên. Một văn phòng ở quá xa hoặc kẹt xe thường xuyên
+                    sẽ gây mệt mỏi, làm giảm đáng kể năng suất làm việc.
+                  </p>
+                </div>
+                <div class="relative order-1 lg:order-2">
+                  <div
+                    class="absolute -inset-4 rotate-2 transform rounded-2xl bg-yellow-100 transition-transform duration-500 group-hover:rotate-0">
+                  </div>
+                  <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                    <img src="../template/Default/assets/images/loiich4.jpg" alt="Ảnh hưởng vị trí văn phòng"
+                      class="h-auto w-full transform object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-center opacity-30">
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-blue-300 to-transparent"></div>
+              </div>
+
+              <div class="group grid grid-cols-1 items-center gap-10 lg:grid-cols-2" data-aos="fade-up">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-4 -rotate-2 transform rounded-2xl bg-blue-100 transition-transform duration-500 group-hover:rotate-0">
+                  </div>
+                  <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                    <img src="../template/Default/assets/images/loiich5.jpg" alt="Lãng phí diện tích văn phòng"
+                      class="h-auto w-full transform object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy" />
+                  </div>
+                </div>
+                <div class="pl-0 lg:pl-10">
+                  <div
+                    class="mb-4 inline-block rounded-full bg-blue-900 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                    Vấn đề #5
+                  </div>
+                  <h3 class="mb-4 text-2xl font-bold leading-snug text-gray-800">
+                    "Lãng phí diện tích và chi phí không cần thiết"
+                  </h3>
+                  <p class="text-lg leading-relaxed text-gray-600">
+                    Xác định diện tích chuẩn là bài toán khó. Văn phòng quá
+                    chật gây ngột ngạt, quá rộng lại lãng phí ngân sách. Cần
+                    sự tính toán khoa học dựa trên quy mô nhân sự thực tế.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex justify-center opacity-30">
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-blue-300 to-transparent"></div>
+              </div>
+
+              <div class="group grid grid-cols-1 items-center gap-10 lg:grid-cols-2" data-aos="fade-up">
+                <div class="order-2 pr-0 lg:order-1 lg:pr-10">
+                  <div
+                    class="mb-4 inline-block rounded-full bg-yellow-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                    Vấn đề #6
+                  </div>
+                  <h3 class="mb-4 text-2xl font-bold leading-snug text-gray-800">
+                    "Thiếu dịch vụ hỗ trợ trọn gói (Tìm kiếm & Thiết kế)"
+                  </h3>
+                  <p class="text-lg leading-relaxed text-gray-600">
+                    Thuê được văn phòng mới chỉ là bước đầu. Doanh nghiệp còn
+                    phải đối mặt với thiết kế, thi công nội thất. Việc không
+                    có đơn vị hỗ trợ "All-in-one" gây mất thời gian và thiếu
+                    đồng bộ.
+                  </p>
+                </div>
+                <div class="relative order-1 lg:order-2">
+                  <div
+                    class="absolute -inset-4 rotate-2 transform rounded-2xl bg-yellow-100 transition-transform duration-500 group-hover:rotate-0">
+                  </div>
+                  <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                    <img src="../template/Default/assets/images/loiich6.jpg" alt="Dịch vụ trọn gói văn phòng"
+                      class="h-auto w-full transform object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-primary py-16" data-aos="zoom-in">
+      <div class="absolute inset-0 opacity-10" style="
+            background-image: radial-gradient(#ca8a04 1px, transparent 1px);
+            background-size: 20px 20px;
+          "></div>
+      <div class="container relative z-10 mx-auto max-w-screen-md px-4 text-center">
+        <i class="fa-solid fa-quote-left mb-6 text-4xl text-secondary opacity-50"></i>
+        <p class="text-2xl font-light leading-relaxed text-white md:text-3xl">
+          "<span class="text-4xl font-bold text-yellow-400">78%</span> nhân
+          viên cảm thấy
+          <span class="border-b border-red-400 font-bold text-red-400">mất động lực</span>
+          làm việc trong môi trường <b>thiếu tiện nghi</b>."
+        </p>
+        <i class="fa-solid fa-quote-right mt-6 text-4xl text-secondary opacity-50"></i>
+      </div>
+    </section>
+
+    <section class="bg-navy-50 py-16">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          <div data-aos="fade-right">
+            <h3 class="mb-4 text-2xl font-bold leading-relaxed text-primary md:text-3xl">
+              Office Saigon tự hào là đơn vị
+              <span class="border-b-2 border-secondary text-secondary">thiết kế thi công</span>
+              đạt hài lòng
+              <span class="text-4xl font-extrabold text-red-600">96%</span>.
+            </h3>
+            <p class="text-lg text-gray-600">
+              Chúng tôi cam kết mang đến giải pháp không gian tối ưu nhất.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-4" data-aos="fade-left">
+            <div
+              class="rounded-2xl border-b-4 border-primary bg-white p-6 text-center shadow-lg transition-transform hover:-translate-y-2">
+              <div class="counter mb-2 text-3xl font-extrabold text-primary md:text-4xl" data-target="10">
+                10+
+              </div>
+              <p class="text-xs font-bold uppercase text-gray-500 md:text-sm">
+                Năm kinh nghiệm
+              </p>
+            </div>
+            <div
+              class="rounded-2xl border-b-4 border-secondary bg-white p-6 text-center shadow-lg transition-transform hover:-translate-y-2">
+              <div class="counter mb-2 text-3xl font-extrabold text-secondary md:text-4xl" data-target="520">
+                520+
+              </div>
+              <p class="text-xs font-bold uppercase text-gray-500 md:text-sm">
+                Dự án
+              </p>
+            </div>
+            <div
+              class="rounded-2xl border-b-4 border-primary bg-white p-6 text-center shadow-lg transition-transform hover:-translate-y-2">
+              <div class="counter mb-2 text-3xl font-extrabold text-primary md:text-4xl" data-target="75">
+                75+
+              </div>
+              <p class="text-xs font-bold uppercase text-gray-500 md:text-sm">
+                Nhân sự
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="mb-16 text-center" data-aos="fade-up">
+          <h2 class="mb-3 text-3xl font-bold uppercase text-primary">
+            Quy trình làm việc
+          </h2>
+          <p class="text-gray-500">
+            4 bước chuyên nghiệp để biến ý tưởng thành hiện thực
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all hover:shadow-xl"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-40 overflow-hidden">
+              <img src="../template/Default/assets/images/qtnew1.jpg"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                onerror="this.src = 'https://placehold.co/300x200'" />
+              <span class="absolute right-0 top-0 rounded-bl-xl bg-secondary px-3 py-2 font-bold text-white">01</span>
+            </div>
+            <div class="p-5">
+              <h4 class="mb-2 font-bold text-primary">Khảo sát & Tư vấn</h4>
+              <p class="text-sm text-gray-600">
+                Đánh giá hiện trạng và lắng nghe nhu cầu.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all hover:shadow-xl"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-40 overflow-hidden">
+              <img src="../template/Default/assets/images/qtnew2.jpg"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                onerror="this.src = 'https://placehold.co/300x200'" />
+              <span class="absolute right-0 top-0 rounded-bl-xl bg-primary px-3 py-2 font-bold text-white">02</span>
+            </div>
+            <div class="p-5">
+              <h4 class="mb-2 font-bold text-primary">Thiết kế 2D/3D</h4>
+              <p class="text-sm text-gray-600">
+                Lên bản vẽ chi tiết, tối ưu công năng.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all hover:shadow-xl"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="relative h-40 overflow-hidden">
+              <img src="../template/Default/assets/images/qtnew3.jpg"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                onerror="this.src = 'https://placehold.co/300x200'" />
+              <span class="absolute right-0 top-0 rounded-bl-xl bg-secondary px-3 py-2 font-bold text-white">03</span>
+            </div>
+            <div class="p-5">
+              <h4 class="mb-2 font-bold text-primary">Thi công</h4>
+              <p class="text-sm text-gray-600">
+                Đảm bảo tiến độ và chất lượng an toàn.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all hover:shadow-xl"
+            data-aos="fade-up" data-aos-delay="400">
+            <div class="relative h-40 overflow-hidden">
+              <img src="../template/Default/assets/images/qtnew4.jpg"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                onerror="this.src = 'https://placehold.co/300x200'" />
+              <span class="absolute right-0 top-0 rounded-bl-xl bg-primary px-3 py-2 font-bold text-white">04</span>
+            </div>
+            <div class="p-5">
+              <h4 class="mb-2 font-bold text-primary">Bàn giao</h4>
+              <p class="text-sm text-gray-600">
+                Nghiệm thu và bảo hành dài hạn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy-50 py-16">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="mb-10 flex flex-col items-end justify-between md:flex-row" data-aos="fade-up">
+          <div>
+            <h2 class="text-3xl font-bold uppercase text-primary">
+              Dự án đã thi công
+            </h2>
+            <div class="mt-2 h-1 w-20 bg-secondary"></div>
+          </div>
+          <a href="#"
+            class="hidden items-center gap-2 font-bold text-primary transition hover:text-secondary md:flex">Xem tất cả
+            <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md transition-all hover:shadow-xl"
+            data-aos="zoom-in">
+            <div class="relative h-60 overflow-hidden">
+              <img src="data/upload/1641886398-van-phong-finan-2.jpg"
+                class="h-full w-full transform object-cover transition duration-700 group-hover:scale-110" onerror="
+                    this.src = 'https://placehold.co/400x300?text=Project'
+                  " />
+            </div>
+            <div class="p-5">
+              <h3 class="mb-1 line-clamp-1 text-lg font-bold text-primary transition group-hover:text-secondary">
+                Công trình Finan
+              </h3>
+              <p class="text-xs text-gray-500">
+                <i class="fa-solid fa-location-dot mr-1 text-secondary"></i>
+                Bình Thạnh, TP.HCM
+              </p>
+            </div>
+          </div>
+          <div
+            class="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md transition-all hover:shadow-xl"
+            data-aos="zoom-in" data-aos-delay="100">
+            <div class="relative h-60 overflow-hidden">
+              <img src="data/upload/1641827252-van-phong-thiet-ke-office-saigon-5.jpg"
+                class="h-full w-full transform object-cover transition duration-700 group-hover:scale-110" onerror="
+                    this.src = 'https://placehold.co/400x300?text=Project'
+                  " />
+            </div>
+            <div class="p-5">
+              <h3 class="mb-1 line-clamp-1 text-lg font-bold text-primary transition group-hover:text-secondary">
+                Office Saigon Office
+              </h3>
+              <p class="text-xs text-gray-500">
+                <i class="fa-solid fa-location-dot mr-1 text-secondary"></i>
+                Phú Nhuận, TP.HCM
+              </p>
+            </div>
+          </div>
+          <div
+            class="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md transition-all hover:shadow-xl"
+            data-aos="zoom-in" data-aos-delay="200">
+            <div class="relative h-60 overflow-hidden">
+              <img src="data/upload/1626626223-du-an-recomm-04.jpg"
+                class="h-full w-full transform object-cover transition duration-700 group-hover:scale-110" onerror="
+                    this.src = 'https://placehold.co/400x300?text=Project'
+                  " />
+            </div>
+            <div class="p-5">
+              <h3 class="mb-1 line-clamp-1 text-lg font-bold text-primary transition group-hover:text-secondary">
+                Việt Nam Recomm
+              </h3>
+              <p class="text-xs text-gray-500">
+                <i class="fa-solid fa-location-dot mr-1 text-secondary"></i>
+                Quận 1, TP.HCM
+              </p>
+            </div>
+          </div>
+          <div
+            class="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md transition-all hover:shadow-xl"
+            data-aos="zoom-in" data-aos-delay="300">
+            <div class="relative h-60 overflow-hidden">
+              <img src="data/upload/1626187602-du-an-taisho-01.jpg"
+                class="h-full w-full transform object-cover transition duration-700 group-hover:scale-110" onerror="
+                    this.src = 'https://placehold.co/400x300?text=Project'
+                  " />
+            </div>
+            <div class="p-5">
+              <h3 class="mb-1 line-clamp-1 text-lg font-bold text-primary transition group-hover:text-secondary">
+                Taisho Việt Nam
+              </h3>
+              <p class="text-xs text-gray-500">
+                <i class="fa-solid fa-location-dot mr-1 text-secondary"></i>
+                Quận 2, TP.HCM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-blue-50 py-16">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          <div data-aos="fade-right">
+            <h3 class="text-2xl font-bold leading-relaxed text-blue-900 md:text-3xl">
+              Office Saigon tự hào là đơn vị
+              <span class="border-b-2 border-yellow-500 text-yellow-600">thiết kế thi công nội thất</span>
+              đạt sự hài lòng đến
+              <span class="text-4xl font-extrabold text-red-600">96%</span> về
+              dịch vụ và chất lượng.
+            </h3>
+            <p class="mt-4 text-gray-600">
+              Chúng tôi cam kết mang đến giải pháp không gian tối ưu nhất cho
+              doanh nghiệp của bạn.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4" data-aos="fade-left">
+            <div
+              class="rounded-2xl border-b-4 border-blue-900 bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:-translate-y-2">
+              <div class="counter mb-2 text-4xl font-extrabold text-blue-900" data-target="10">
+                10+
+              </div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-gray-500">
+                Năm kinh nghiệm
+              </p>
+            </div>
+            <div
+              class="rounded-2xl border-b-4 border-yellow-500 bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:-translate-y-2">
+              <div class="counter mb-2 text-4xl font-extrabold text-yellow-600" data-target="520">
+                520+
+              </div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-gray-500">
+                Dự án hoàn thiện
+              </p>
+            </div>
+            <div
+              class="rounded-2xl border-b-4 border-blue-900 bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:-translate-y-2">
+              <div class="counter mb-2 text-4xl font-extrabold text-blue-900" data-target="75">
+                75+
+              </div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-gray-500">
+                Nhân sự
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-blue-900 py-20">
+      <div class="absolute right-0 top-0 text-white opacity-10">
+        <i class="fa-solid fa-layer-group -mr-20 -mt-20 text-[300px]"></i>
+      </div>
+
+      <div class="container relative z-10 mx-auto max-w-screen-xl px-4">
+        <div class="mb-16 text-center" data-aos="fade-down">
+          <h2 class="text-3xl font-bold uppercase text-white md:text-4xl">
+            Các gói thiết kế thi công nội thất
+          </h2>
+          <div class="mx-auto mt-4 h-1.5 w-24 rounded bg-yellow-500"></div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div
+            class="transform overflow-hidden rounded-2xl bg-white shadow-2xl transition-all duration-300 hover:scale-105"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="border-b border-gray-100 bg-gray-50 p-8 text-center">
+              <h3 class="mb-2 text-xl font-bold uppercase text-gray-600">
+                Gói Tối Giản
+              </h3>
+              <div class="text-3xl font-extrabold text-blue-900">
+                2.000.000
+                <span class="text-sm font-normal text-gray-500">đ/m²</span>
+              </div>
+              <p class="mt-2 text-sm text-gray-500">Diện tích: 1 - 200m²</p>
+            </div>
+            <div class="p-8">
+              <ul class="space-y-4 text-sm text-gray-600">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check mt-1 text-green-500"></i>
+                  <span>Layout: <strong>Tiêu chuẩn</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check mt-1 text-green-500"></i>
+                  <span>Nội thất: <strong>Gỗ MFC</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check mt-1 text-green-500"></i>
+                  <span>M&E: <strong>Cơ bản</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check mt-1 text-green-500"></i>
+                  <span>Sàn: <strong>Hiện trạng / Thảm cuộn</strong></span>
+                </li>
+              </ul>
+              <button onclick="window.open('../lien-he-noi-that.html')"
+                class="mt-8 w-full rounded-xl border-2 border-blue-900 py-3 font-bold text-blue-900 transition-colors hover:bg-blue-900 hover:text-white">
+                Đăng ký ngay
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="relative scale-105 transform overflow-hidden rounded-2xl border-4 border-yellow-500 bg-white shadow-2xl"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="absolute right-0 top-0 rounded-bl-lg bg-yellow-500 px-3 py-1 text-xs font-bold text-white">
+              Phổ biến nhất
+            </div>
+            <div class="border-b border-blue-100 bg-blue-50 p-8 text-center">
+              <h3 class="mb-2 text-xl font-bold uppercase text-blue-900">
+                Gói Cơ Bản
+              </h3>
+              <div class="text-3xl font-extrabold text-blue-900">
+                4.000.000
+                <span class="text-sm font-normal text-gray-500">đ/m²</span>
+              </div>
+              <p class="mt-2 text-sm text-gray-500">Diện tích: 1 - 200m²</p>
+            </div>
+            <div class="p-8">
+              <ul class="space-y-4 text-sm text-gray-700">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle-check mt-1 text-yellow-500"></i>
+                  <span>Layout: <strong>Nâng cao</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle-check mt-1 text-yellow-500"></i>
+                  <span>Nội thất: <strong>Gỗ MDF Cao cấp</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle-check mt-1 text-yellow-500"></i>
+                  <span>Tường: <strong>Kính, Laminated</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle-check mt-1 text-yellow-500"></i>
+                  <span>Trần: <strong>Thạch cao trang trí</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle-check mt-1 text-yellow-500"></i>
+                  <span>Sàn: <strong>Vinyl / Sàn gỗ</strong></span>
+                </li>
+              </ul>
+              <button onclick="window.open('../lien-he-noi-that.html')"
+                class="mt-8 w-full rounded-xl bg-gradient-to-r from-blue-900 to-blue-800 py-3 font-bold text-white transition-all hover:shadow-lg">
+                Đăng ký ngay
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="transform overflow-hidden rounded-2xl bg-white shadow-2xl transition-all duration-300 hover:scale-105"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="border-b border-gray-100 bg-gray-50 p-8 text-center">
+              <h3 class="mb-2 text-xl font-bold uppercase text-yellow-600">
+                Gói Cao Cấp
+              </h3>
+              <div class="text-3xl font-extrabold text-blue-900">
+                5.000.000
+                <span class="text-sm font-normal text-gray-500">đ/m²</span>
+              </div>
+              <p class="mt-2 text-sm text-gray-500">Diện tích: 1 - 200m²</p>
+            </div>
+            <div class="p-8">
+              <ul class="space-y-4 text-sm text-gray-600">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-star mt-1 text-yellow-500"></i>
+                  <span>Layout: <strong>Cao cấp</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-star mt-1 text-yellow-500"></i>
+                  <span>Nội thất: <strong>Gỗ Tự nhiên</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-star mt-1 text-yellow-500"></i>
+                  <span>Tường: <strong>Ốp gỗ / Ốp đá</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-star mt-1 text-yellow-500"></i>
+                  <span>Trần: <strong>Thạch lam / Nhôm</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-star mt-1 text-yellow-500"></i>
+                  <span>Sàn: <strong>Đá Granite</strong></span>
+                </li>
+              </ul>
+              <button onclick="window.open('../lien-he-noi-that.html')"
+                class="mt-8 w-full rounded-xl border-2 border-yellow-600 py-3 font-bold text-yellow-700 transition-colors hover:bg-yellow-600 hover:text-white">
+                Đăng ký ngay
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="mb-16 text-center" data-aos="fade-up">
+          <h2 class="mb-3 text-3xl font-bold uppercase text-blue-900">
+            Quy trình làm việc chuyên nghiệp
+          </h2>
+          <p class="text-gray-500">
+            4 bước để biến văn phòng mơ ước thành hiện thực
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-300 group-hover:shadow-2xl">
+              <div class="relative h-48 overflow-hidden">
+                <img src="../template/Default/assets/images/qtnew1.jpg" alt="Khảo sát"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute right-0 top-0 rounded-bl-2xl bg-yellow-500 px-4 py-3 text-xl font-bold text-white">
+                  01
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="mb-2 text-lg font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
+                  Khảo sát & Tư vấn
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Đánh giá không gian, lắng nghe nhu cầu và mong muốn cụ thể
+                  của bạn.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-300 group-hover:shadow-2xl">
+              <div class="relative h-48 overflow-hidden">
+                <img src="../template/Default/assets/images/qtnew2.jpg" alt="Thiết kế"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute right-0 top-0 rounded-bl-2xl bg-blue-900 px-4 py-3 text-xl font-bold text-white">
+                  02
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="mb-2 text-lg font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
+                  Thiết kế 2D/3D
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Đội ngũ kiến trúc sư thiết kế bản vẽ chi tiết, hiện đại và
+                  thẩm mỹ.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-300 group-hover:shadow-2xl">
+              <div class="relative h-48 overflow-hidden">
+                <img src="../template/Default/assets/images/qtnew3.jpg" alt="Thi công"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute right-0 top-0 rounded-bl-2xl bg-yellow-500 px-4 py-3 text-xl font-bold text-white">
+                  03
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="mb-2 text-lg font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
+                  Thi công chất lượng
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Đảm bảo tiến độ, chất lượng và an toàn trong từng công đoạn.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group relative" data-aos="fade-up" data-aos-delay="400">
+            <div
+              class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-300 group-hover:shadow-2xl">
+              <div class="relative h-48 overflow-hidden">
+                <img src="../template/Default/assets/images/qtnew4.jpg" alt="Bàn giao"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div class="absolute right-0 top-0 rounded-bl-2xl bg-blue-900 px-4 py-3 text-xl font-bold text-white">
+                  04
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="mb-2 text-lg font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
+                  Bàn giao & Bảo hành
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Bàn giao đúng cam kết và sẵn sàng hỗ trợ khách hàng sau dự
+                  án.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 py-16">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="mb-10 flex flex-col items-end justify-between md:flex-row" data-aos="fade-up">
+          <div>
+            <h2 class="text-3xl font-bold uppercase text-blue-900">
+              Các dự án đã thi công
+            </h2>
+            <div class="mt-2 h-1 w-20 bg-yellow-500"></div>
+          </div>
+          <a href="../du-an-thiet-ke-noi-that.html"
+            class="hidden items-center gap-2 font-semibold text-blue-900 transition-colors hover:text-yellow-600 md:inline-flex">
+            Xem tất cả <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:shadow-xl"
+            data-aos="zoom-in" data-aos-delay="100">
+            <div class="relative h-60 overflow-hidden">
+              <a href="./thiet-ke-thi-cong-noi-that-van-phong-finan.html">
+                <img src="data/upload/1641886398-van-phong-finan-2.jpg" alt="Finan"
+                  class="h-full w-full transform object-cover transition-transform duration-700 group-hover:scale-110" />
+              </a>
+            </div>
+            <div class="p-5">
+              <h3
+                class="mb-3 line-clamp-1 text-lg font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
+                <a href="#">Công trình công ty Finan</a>
+              </h3>
+              <div class="space-y-2 text-xs text-gray-600">
+                <p class="flex items-start gap-2">
+                  <i class="fa-solid fa-location-dot mt-0.5 w-4 text-yellow-500"></i>
+                  <span class="line-clamp-2">The Hub, Bình Thạnh</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fa-solid fa-ruler-combined w-4 text-yellow-500"></i>
+                  <span>450m²</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fa-solid fa-helmet-safety w-4 text-yellow-500"></i>
+                  <span>Office Saigon</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:shadow-xl"
+            data-aos="zoom-in" data-aos-delay="200">
+            <div class="relative h-60 overflow-hidden">
+              <a href="./thiet-ke-thi-cong-noi-that-van-phong-office-saigon.html">
+                <img src="data/upload/1641827252-van-phong-thiet-ke-office-saigon-5.jpg" alt="Office Saigon"
+                  class="h-full w-full transform object-cover transition-transform duration-700 group-hover:scale-110" />
+              </a>
+            </div>
+            <div class="p-5">
+              <h3
+                class="mb-3 line-clamp-1 text-lg font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
+                <a href="#">Văn phòng Office Saigon</a>
+              </h3>
+              <div class="space-y-2 text-xs text-gray-600">
+                <p class="flex items-start gap-2">
+                  <i class="fa-solid fa-location-dot mt-0.5 w-4 text-yellow-500"></i>
+                  <span class="line-clamp-2">Phú Nhuận, TP.HCM</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fa-solid fa-ruler-combined w-4 text-yellow-500"></i>
+                  <span>60m²</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fa-solid fa-helmet-safety w-4 text-yellow-500"></i>
+                  <span>Office Saigon</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:shadow-xl"
+            data-aos="zoom-in" data-aos-delay="300">
+            <div class="relative h-60 overflow-hidden">
+              <a href="./thiet-ke-thi-cong-noi-that-van-phong-viet-nam-recomm.html">
+                <img src="data/upload/1626626223-du-an-recomm-04.jpg" alt="Recomm"
+                  class="h-full w-full transform object-cover transition-transform duration-700 group-hover:scale-110" />
+              </a>
+            </div>
+            <div class="p-5">
+              <h3
+                class="mb-3 line-clamp-1 text-lg font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
+                <a href="#">Việt Nam Recomm</a>
+              </h3>
+              <div class="space-y-2 text-xs text-gray-600">
+                <p class="flex items-start gap-2">
+                  <i class="fa-solid fa-location-dot mt-0.5 w-4 text-yellow-500"></i>
+                  <span class="line-clamp-2">Nguyễn Thị Minh Khai, Q.1</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fa-solid fa-ruler-combined w-4 text-yellow-500"></i>
+                  <span>80m²</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fa-solid fa-helmet-safety w-4 text-yellow-500"></i>
+                  <span>Office Saigon</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:shadow-xl"
+            data-aos="zoom-in" data-aos-delay="400">
+            <div class="relative h-60 overflow-hidden">
+              <a href="./thiet-ke-thi-cong-noi-that-van-phong-taisho-viet-nam.html">
+                <img src="data/upload/1626187602-du-an-taisho-01.jpg" alt="Taisho"
+                  class="h-full w-full transform object-cover transition-transform duration-700 group-hover:scale-110" />
+              </a>
+            </div>
+            <div class="p-5">
+              <h3
+                class="mb-3 line-clamp-1 text-lg font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
+                <a href="#">Taisho Việt Nam</a>
+              </h3>
+              <div class="space-y-2 text-xs text-gray-600">
+                <p class="flex items-start gap-2">
+                  <i class="fa-solid fa-location-dot mt-0.5 w-4 text-yellow-500"></i>
+                  <span class="line-clamp-2">Nguyễn Đăng Giai, Q.2</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fa-solid fa-ruler-combined w-4 text-yellow-500"></i>
+                  <span>390m²</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fa-solid fa-helmet-safety w-4 text-yellow-500"></i>
+                  <span>Office Saigon</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center md:hidden">
+          <a href="../du-an-thiet-ke-noi-that.html"
+            class="inline-flex items-center rounded-full border border-blue-900 bg-white px-6 py-3 font-bold text-blue-900 transition-all hover:bg-blue-900 hover:text-white">
+            Xem tất cả <i class="fa-solid fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="group relative h-[500px] w-full overflow-hidden">
+      <img src="../template/Default/assets/images/banner-sec-1.png" alt="Banner"
+        class="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-105"
+        onerror="
+            this.src = 'https://placehold.co/1920x600?text=Banner+Design'
+          " />
+      <div class="from-primary/90 via-primary/40 absolute inset-0 bg-gradient-to-t to-transparent"></div>
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center" data-aos="zoom-in">
+        <h2 class="mb-8 text-3xl font-bold uppercase text-white drop-shadow-lg md:text-5xl">
+          Kiến tạo không gian <br />
+          <span class="text-secondary">Nâng tầm thương hiệu</span>
+        </h2>
+        <button onclick="window.open('../lien-he-noi-that.html')"
+          class="flex transform animate-bounce items-center gap-3 rounded-full bg-secondary px-10 py-4 text-lg font-bold text-primary shadow-2xl transition-all hover:scale-110 hover:bg-white hover:text-primary">
+          <i class="fa-solid fa-pen-nib"></i> Đăng ký thiết kế ngay
+        </button>
+      </div>
+    </section>
+    <section class="container mx-auto max-w-screen-xl">
+      <!-- content started -->
+      <div class="mx-auto max-w-screen-2xl py-8">
+        <!-- Gặp gỡ đội ngũ tư vấn -->
+        <section class="overflow-hidden bg-white py-16">
+          <div class="container mx-auto">
+            <div class="mb-12 text-center" data-aos="fade-up">
+              <h2 class="mb-4 text-4xl font-bold text-navy">
+                GẶP GỠ ĐỘI NGŨ TƯ VẤN
+              </h2>
+              <p class="text-lg text-gray-600">
+                Đội ngũ tư vấn cho thuê văn phòng hơn 5 năm kinh nghiệm trên
+                thị trường
+              </p>
+            </div>
+
+            <!-- Team Swiper -->
+            <div class="relative">
+              <div class="team-swiper overflow-x-hidden">
+                <div class="swiper-wrapper py-6">
+                  <!-- Member 1 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                      <div class="relative overflow-hidden">
+                        <img src="assets/images/consulting-team/consulting-team-1.jpg" alt="Phạm Thu Lại"
+                          class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent transition-opacity duration-500 group-hover:from-navy/90">
+                        </div>
+                      </div>
+                      <div class="p-6 text-center">
+                        <h3
+                          class="mb-2 text-2xl font-bold text-navy transition-colors duration-300 group-hover:text-gold">
+                          Phạm Thu Lại
+                        </h3>
+                        <p class="text-gray-600">Hơn 9 năm kinh nghiệm</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Member 2 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                      <div class="relative overflow-hidden">
+                        <img src="assets/images/consulting-team/consulting-team-2.jpg" alt="Võ Thị Thu Vân"
+                          class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent transition-opacity duration-500 group-hover:from-navy/90">
+                        </div>
+                      </div>
+                      <div class="p-6 text-center">
+                        <h3
+                          class="mb-2 text-2xl font-bold text-navy transition-colors duration-300 group-hover:text-gold">
+                          Võ Thị Thu Vân
+                        </h3>
+                        <p class="text-gray-600">Hơn 7 năm kinh nghiệm</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Member 3 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                      <div class="relative overflow-hidden">
+                        <img src="assets/images/consulting-team/consulting-team-1.jpg" alt="Võ Thị Thu Vân"
+                          class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent transition-opacity duration-500 group-hover:from-navy/90">
+                        </div>
+                      </div>
+                      <div class="p-6 text-center">
+                        <h3
+                          class="mb-2 text-2xl font-bold text-navy transition-colors duration-300 group-hover:text-gold">
+                          Nguyễn Mỹ Phương
+                        </h3>
+                        <p class="text-gray-600">Hơn 7 năm kinh nghiệm</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Member 4 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                      <div class="relative overflow-hidden">
+                        <img src="assets/images/consulting-team/consulting-team-4.jpg" alt="Võ Thị Thu Vân"
+                          class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent transition-opacity duration-500 group-hover:from-navy/90">
+                        </div>
+                      </div>
+                      <div class="p-6 text-center">
+                        <h3
+                          class="mb-2 text-2xl font-bold text-navy transition-colors duration-300 group-hover:text-gold">
+                          Nguyễn Khánh Chi
+                        </h3>
+                        <p class="text-gray-600">Hơn 7 năm kinh nghiệm</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Member 5 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                      <div class="relative overflow-hidden">
+                        <img src="assets/images/consulting-team/consulting-team-5.jpg" alt="Võ Thị Thu Vân"
+                          class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent transition-opacity duration-500 group-hover:from-navy/90">
+                        </div>
+                      </div>
+                      <div class="p-6 text-center">
+                        <h3
+                          class="mb-2 text-2xl font-bold text-navy transition-colors duration-300 group-hover:text-gold">
+                          Trần Lê Phương Quỳnh
+                        </h3>
+                        <p class="text-gray-600">Hơn 7 năm kinh nghiệm</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Member 6 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                      <div class="relative overflow-hidden">
+                        <img src="assets/images/consulting-team/consulting-team-6.jpg" alt="Võ Thị Thu Vân"
+                          class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent transition-opacity duration-500 group-hover:from-navy/90">
+                        </div>
+                      </div>
+                      <div class="p-6 text-center">
+                        <h3
+                          class="mb-2 text-2xl font-bold text-navy transition-colors duration-300 group-hover:text-gold">
+                          Ăng Gơ Lê Na Trô Lì
+                        </h3>
+                        <p class="text-gray-600">Hơn 7 năm kinh nghiệm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2" data-aos="fade-up">
+              <!-- Left Image -->
+              <div class="relative" data-aos="fade-right">
+                <img src="assets/images/working-meeting-asian-colleagues.jpg" alt="Tư vấn"
+                  class="h-full w-full rounded-2xl object-cover shadow-lg" />
+              </div>
+
+              <!-- Right Content -->
+              <div class="flex flex-col justify-center" data-aos="fade-left">
+                <div class="mb-6 inline-block">
+                  <span class="rounded-full bg-gold/10 px-4 py-2 text-sm font-semibold text-gold">Liên hệ</span>
+                </div>
+                <h3 class="mb-6 text-3xl font-bold text-navy">
+                  Lợi ích khi chọn
+                  <span class="text-gold">An Phú Holdings</span> là đơn vị tư
+                  vấn thuê văn phòng và thiết kế thi công nội thất.
+                </h3>
+
+                <div class="space-y-4">
+                  <div class="flex items-start gap-4 transition-all duration-300 hover:translate-x-2"
+                    data-aos="fade-left" data-aos-delay="100">
+                    <div
+                      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold/10 transition-transform duration-300 hover:scale-110">
+                      <span class="text-xl font-bold text-gold">1</span>
+                    </div>
+                    <p class="text-gray-600">
+                      Sử dụng AI phân tích nhu cầu của bạn giải pháp chi từ 7
+                      - 10 phút.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start gap-4 transition-all duration-300 hover:translate-x-2"
+                    data-aos="fade-left" data-aos-delay="200">
+                    <div
+                      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold/10 transition-transform duration-300 hover:scale-110">
+                      <span class="text-xl font-bold text-gold">2</span>
+                    </div>
+                    <p class="text-gray-600">
+                      Kết hợp tìm văn phòng & thiết kế thi công nội thất giúp
+                      tiết kiệm đến 30%.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start gap-4 transition-all duration-300 hover:translate-x-2"
+                    data-aos="fade-left" data-aos-delay="300">
+                    <div
+                      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold/10 transition-transform duration-300 hover:scale-110">
+                      <span class="text-xl font-bold text-gold">3</span>
+                    </div>
+                    <p class="text-gray-600">
+                      Co xe hợi dẫn tận nơi, miễn phí toàn bộ dịch vụ tư trong
+                      suốt quá trình.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start gap-4 transition-all duration-300 hover:translate-x-2"
+                    data-aos="fade-left" data-aos-delay="400">
+                    <div
+                      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold/10 transition-transform duration-300 hover:scale-110">
+                      <span class="text-xl font-bold text-gold">4</span>
+                    </div>
+                    <p class="text-gray-600">
+                      Tặng 2 vé du lịch Thái Lan khi khách thuê hoặc thi công
+                      từ 500m2 trở lên.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-8 space-y-4">
+                  <button
+                    class="w-full rounded-lg bg-navy px-8 py-4 text-lg font-semibold text-white transition hover:bg-navy-light">
+                    Hotline : 0987110011
+                  </button>
+                  <button
+                    class="w-full rounded-lg border-2 border-navy px-8 py-4 text-lg font-semibold text-navy transition hover:bg-navy hover:text-white">
+                    Để lại thông tin
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+  <!-- Footer nháp -->
+  <footer class="section-padding-t">
+    <div
+      class="container mx-auto mb-6 grid w-full max-w-[100] grid-cols-6 gap-3 px-4 md:mb-10 md:grid-cols-5 lg:mb-14 lg:px-0">
+      <div data-aos="fade-up" class="col-span-4 md:col-span-2">
+        <a href="/" class="flex items-center gap-x-3" aria-label="Trang chủ Homelist">
+          <img src="assets/logo/anphu-holdings.jpg" alt="Logo Homelist" class="size-fit" width="120" height="40"
+            loading="lazy" />
+        </a>
+
+        <div class="mt-10">
+          <h2 class="mb-5 text-lg font-bold text-nature-600 md:text-xl">
+            Địa chỉ
+          </h2>
+          <address class="font-poppins text-sm not-italic text-nature-400 md:text-base">
+            <span>🏠 Deutsches Haus 33 - Lê Duẩn, Quận 1 <br />
+              TP. Hồ Chí Minh, Việt Nam</span>
+            <span class="my-2 block">📞 <a href="tel:+84881234567">+(84) 987 11 00 11</a></span>
+            ✉️ <a href="mailto:mail@example.com">support@anphuholdings.vn</a>
+          </address>
+        </div>
+      </div>
+
+      <nav data-aos="fade-up" data-aos-delay="150" class="col-span-2 md:col-span-1" aria-label="Về chúng tôi">
+        <h2 class="mb-2.5 text-lg font-bold text-nature-600 md:mb-3.5 md:text-xl lg:mb-5">
+          Về chúng tôi
+        </h2>
+        <ul class="grid gap-2 font-poppins text-sm text-nature-400 md:gap-3 md:text-base lg:gap-4">
+          <li class="transition-all hover:text-nature-500">
+            <a href="#about">Giới thiệu</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="#policy">Chính sách</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="#careers">Tuyển dụng</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="#blog">Blog</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="#contact">Liên hệ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav data-aos="fade-up" data-aos-delay="300" class="col-span-3 md:col-span-1" aria-label="Dịch vụ">
+        <h2 class="mb-2.5 text-lg font-bold text-nature-600 md:mb-3.5 md:text-xl lg:mb-5">
+          Dịch vụ
+        </h2>
+        <ul class="grid gap-2 font-poppins text-sm text-nature-400 md:gap-3 md:text-base lg:gap-4">
+          <li class="transition-all hover:text-nature-500">
+            <a href="/van-phong-tron-goi">Văn phòng trọn gói</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="/coworking-space">Coworking Space</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="/phong-hop">Phòng họp</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="/van-phong-ao">Văn phòng ảo</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="/dia-diem">Địa điểm</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav data-aos="fade-up" data-aos-delay="450" class="col-span-3 md:col-span-1" aria-label="Hỗ trợ">
+        <h2 class="mb-2.5 text-lg font-bold text-nature-600 md:mb-3.5 md:text-xl lg:mb-5">
+          Hỗ trợ
+        </h2>
+        <ul class="grid gap-2 font-poppins text-sm text-nature-400 md:gap-3 md:text-base lg:gap-4">
+          <li class="transition-all hover:text-nature-500">
+            <a href="/faq">Câu hỏi thường gặp</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="/huong-dan">Hướng dẫn</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="/dieu-khoan">Điều khoản sử dụng</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="/chinh-sach-bao-mat">Chính sách bảo mật</a>
+          </li>
+          <li class="transition-all hover:text-nature-500">
+            <a href="/sitemap.xml">Sitemap</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container mx-auto max-w-[1230px] px-4 lg:px-0">
+      <hr />
+    </div>
+
+    <div
+      class="container mx-auto mb-3.5 mt-5 flex max-w-[100] flex-col items-center justify-center gap-y-3.5 px-4 md:mb-6 md:mt-10 md:flex-row md:justify-between lg:mb-9 lg:mt-[54px] lg:px-0">
+      <p class="text-sm leading-[14px] text-nature-400">
+        &copy;2024 An Phú Holdings Creative. All rights reserved.
+      </p>
+
+      <div class="flex items-center gap-x-4 md:gap-x-7 lg:gap-x-10">
+        <p class="text-sm leading-[14px] text-nature-400">
+          Theo dõi chúng tôi
+        </p>
+        <ul class="flex items-center gap-x-4 md:gap-x-7 lg:gap-x-10">
+          <li>
+            <a href="#facebook" aria-label="Facebook Homelist">
+              <i
+                class="fa-brands fa-facebook-f text-sm text-slate-400 transition-all hover:text-gold md:text-base lg:text-lg"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#twitter" aria-label="Twitter Homelist">
+              <i
+                class="fa-brands fa-x-twitter text-sm text-slate-400 transition-all hover:text-gold md:text-base lg:text-lg"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#instagram" aria-label="Instagram Homelist">
+              <i
+                class="fa-brands fa-instagram text-sm text-slate-400 transition-all hover:text-gold md:text-base lg:text-lg"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#linkedin" aria-label="LinkedIn Homelist">
+              <i
+                class="fa-brands fa-linkedin-in text-sm text-slate-400 transition-all hover:text-gold md:text-base lg:text-lg"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer nháp -->
+
+  <!-- drawer component -->
+  <div id="drawer-right-example"
+    class="fixed right-0 top-0 z-[60] h-screen w-96 translate-x-full overflow-y-auto border-l bg-white p-10 transition-transform"
+    tabindex="-1" aria-labelledby="drawer-right-label">
+    <a href="index.html">
+      <img src="assets/logo/anphu-holdings.jpg" alt="Homelist" />
+    </a>
+    <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example"
+      class="group absolute right-10 top-10 inline-flex size-[38px] items-center justify-center rounded-full bg-rose-100 text-sm text-rose-600">
+      <svg class="size-3.5 transition-transform duration-500 ease-in-out group-hover:rotate-180" aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+      </svg>
+      <span class="sr-only">Close menu</span>
+    </button>
+
+    <div class="mt-8">
+      <article class="prose prose-ul:m-0 prose-ul:list-none prose-ul:space-y-2.5 prose-ul:pl-0 prose-li:pl-0">
+        <h3>About Us</h3>
+        <p>
+          An Phú Holdings là doanh nghiệp tiên phong trong lĩnh vực bất động
+          sản và phát triển không gian làm việc hiện đại. Với tầm nhìn chiến
+          lược, công ty luôn đặt sự bền vững và giá trị lâu dài lên hàng đầu.
+          An Phú Holdings tự hào đồng hành cùng nhiều đối tác uy tín để kiến
+          tạo những dự án chất lượng, mang đến môi trường làm việc chuyên
+          nghiệp, tiện nghi và thân thiện. Chúng tôi cam kết xây dựng nền tảng
+          phát triển bền vững, đóng góp tích cực cho cộng đồng và xã hội.
+        </p>
+
+        <h3>Contact Info</h3>
+        <div>
+          <ul>
+            <li>
+              <h4 class="m-0 font-semibold">Email</h4>
+              <div class="flex items-center gap-x-1.5">
+                <span class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary">
+                  <i class="fa-solid fa-envelope text-primary"></i>
+                </span>
+                <span class="text-base leading-none text-slate-500">support@anphuholdings.vn</span>
+              </div>
+            </li>
+            <li>
+              <h4 class="m-0 font-semibold">Phone</h4>
+              <div class="flex items-center gap-x-1.5">
+                <span class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary">
+                  <i class="fa-solid fa-phone text-primary"></i>
+                </span>
+                <span class="text-base text-slate-500">+(84) 987 11 00 11</span>
+              </div>
+            </li>
+            <li>
+              <h4 class="m-0 font-semibold">Address</h4>
+              <div class="flex items-center gap-x-1.5">
+                <span class="inline-flex size-8 items-center justify-center rounded-md bg-primary-50 text-primary">
+                  <i class="fa-solid fa-map-marker-alt text-primary"></i>
+                </span>
+                <span class="text-base text-slate-500"><strong>Deutsches Haus</strong> 33 - Lê Duẩn, Quận 1 TP. Hồ
+                  Chí Minh, Việt Nam</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-8">
+          <h3>Follow Us</h3>
+          <menu class="flex items-center gap-x-2.5">
+            <li>
+              <a href="#" class="group flex size-10 items-center justify-center rounded-full bg-primary-50">
+                <i
+                  class="fa-brands fa-facebook text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group flex size-10 items-center justify-center rounded-full bg-primary-50">
+                <i
+                  class="fa-brands fa-twitter text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group flex size-10 items-center justify-center rounded-full bg-primary-50">
+                <i
+                  class="fa-brands fa-instagram text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group flex size-10 items-center justify-center rounded-full bg-primary-50">
+                <i
+                  class="fa-brands fa-linkedin text-lg text-primary transition-transform duration-700 group-hover:rotate-[360deg] group-hover:scale-125"></i>
+              </a>
+            </li>
+          </menu>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/fontawesome.min.js"></script>
+  <script src="js/flowbite.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/odometer.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
+
+  <!-- filter slide range -->
+  <!-- noUiSlider CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.6.1/dist/nouislider.min.js"></script>
+  <script>
+    // 1. Khởi tạo Animation AOS
+    AOS.init({ duration: 800, once: true });
+
+    // 2. Swiper Đối tác (Auto chạy)
+    new Swiper('.partnerSwiper', {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: { delay: 2000, disableOnInteraction: false },
+      breakpoints: {
+        640: { slidesPerView: 3 },
+        768: { slidesPerView: 4 },
+        1024: { slidesPerView: 5 },
+      },
+    });
+
+    // 3. Swiper Testimonials
+    new Swiper('.testimonialSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+
+    // 4. Animation Con số (Counter)
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach((counter) => {
+      const target = +counter.getAttribute('data-target');
+      const increment = target / 100;
+      let count = 0;
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = Math.ceil(count) + '+';
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target + '+';
+        }
+      };
+      updateCount();
+    });
+    // Team Swiper
+    const teamSwiper = new Swiper('.team-swiper', {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      loop: true,
+      speed: 800,
+      effect: 'slide',
+      grabCursor: true,
+      centeredSlides: false,
+      navigation: {
+        nextEl: '.team-swiper-button-next',
+        prevEl: '.team-swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+        },
+      },
+    });
+  </script>
+  <!-- filter slide range -->
+</body>
+
+</html>

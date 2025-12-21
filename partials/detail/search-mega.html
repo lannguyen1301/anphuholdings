@@ -1,0 +1,192 @@
+<div class="container mx-auto max-w-[1230px] px-4 lg:px-0">
+    <div class="rounded-xl border border-navy/20 bg-white p-4 shadow-lg">
+        <div class="mb-3 flex items-center justify-between">
+            <h2 class="flex items-center gap-2 text-lg font-bold text-slate-800">
+                <i class="fas fa-search text-navy"></i>
+                Tìm kiếm văn phòng
+            </h2>
+            <button type="button" id="toggle-search-btn"
+                class="flex items-center gap-2 rounded-lg border border-navy/30 bg-white px-4 py-2 text-sm font-medium text-navy transition-all hover:border-navy/50 hover:bg-navy/5 focus:outline-none focus:ring-2 focus:ring-navy/20">
+                <span id="toggle-search-text">Thu gọn</span>
+                <i id="toggle-search-icon" class="fas fa-chevron-up transition-transform duration-300"></i>
+            </button>
+        </div>
+        <form id="search-form">
+            <div class="grid grid-cols-1 gap-2.5 transition-all duration-300 sm:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <label class="mb-1 block text-xs font-medium text-slate-600">
+                        <i class="fas fa-map-marker-alt mr-1.5 text-[10px] text-navy/70"></i>
+                        Chọn quận/huyện
+                    </label>
+                    <select
+                        class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm transition-all duration-200 hover:border-slate-400 focus:border-navy focus:ring-2 focus:ring-navy/20">
+                        <option value="">Tất cả</option>
+                        <option value="quan-1">Quận 1</option>
+                        <option value="quan-2">Quận 2</option>
+                        <option value="quan-3">Quận 3</option>
+                        <option value="quan-7">Quận 7</option>
+                        <option value="binh-thanh">Bình Thạnh</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="mb-1 block text-xs font-medium text-slate-600">
+                        <i class="fas fa-location-dot mr-1.5 text-[10px] text-navy/70"></i>
+                        Chọn phường
+                    </label>
+                    <select
+                        class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm transition-all duration-200 hover:border-slate-400 focus:border-navy focus:ring-2 focus:ring-navy/20">
+                        <option value="">Tất cả</option>
+                        <option value="ben-nghe">Bến Nghé</option>
+                        <option value="tan-dinh">Tân Định</option>
+                        <option value="nguyen-thai-binh">Nguyễn Thái Bình</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="mb-1 block text-xs font-medium text-slate-600">
+                        <i class="fas fa-compass mr-1.5 text-[10px] text-navy/70"></i>
+                        Chọn hướng
+                    </label>
+                    <select
+                        class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm transition-all duration-200 hover:border-slate-400 focus:border-navy focus:ring-2 focus:ring-navy/20">
+                        <option value="">Tất cả</option>
+                        <option value="dong">Đông</option>
+                        <option value="tay">Tây</option>
+                        <option value="nam">Nam</option>
+                        <option value="bac">Bắc</option>
+                        <option value="dong-nam">Đông Nam</option>
+                        <option value="tay-nam">Tây Nam</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="mb-1 block text-xs font-medium text-slate-600">Tên tòa nhà</label>
+                    <input type="text" placeholder="Nhập tên tòa nhà..."
+                        class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-navy focus:ring-2 focus:ring-navy" />
+                </div>
+
+                <!-- Collapsible Advanced Filters -->
+                <div id="search-form-content"
+                    class="mt-3 grid grid-cols-1 gap-2.5 overflow-hidden border-t border-slate-200 px-4 pt-4 transition-all duration-300 ease-in-out sm:col-span-2 sm:grid-cols-2 lg:col-span-4 lg:grid-cols-4 hidden"
+                    style="display: none;">
+                    <!-- Price Range Filter -->
+                    <div class="sm:col-span-2 lg:col-span-4">
+                        <label class="mb-2 block text-xs font-medium text-slate-600">
+                            <i class="fas fa-dollar-sign mr-1.5 text-[10px] text-navy/70"></i>
+                            Khoảng giá (VND/tháng)
+                        </label>
+
+                        <div class="px-2">
+                            <div class="mb-2 flex items-center justify-between">
+                                <span class="text-sm font-semibold text-gold" id="min-price-display">
+                                    20 triệu
+                                </span>
+                                <span class="text-xs text-slate-500">đến</span>
+                                <span class="text-sm font-semibold text-gold" id="max-price-display">
+                                    500 triệu
+                                </span>
+                            </div>
+
+                            <!-- Slider chính -->
+                            <div id="price-slider" class="my-2"></div>
+
+                            <!-- Giá trị thực để submit form (ẩn) -->
+                            <input type="hidden" id="min-price-input" name="min_price" value="20000000" />
+                            <input type="hidden" id="max-price-input" name="max_price" value="500000000" />
+                        </div>
+                    </div>
+
+                    <!-- Area Range Filter -->
+                    <div class="sm:col-span-2 lg:col-span-4">
+                        <label class="mb-2 block text-xs font-medium text-slate-600">
+                            <i class="fas fa-vector-square mr-1.5 text-[10px] text-navy/70"></i>
+                            Diện tích (m²)
+                        </label>
+
+                        <div class="px-2">
+                            <div class="mb-2 flex items-center justify-between">
+                                <span class="text-sm font-semibold text-gold" id="min-area-display">
+                                    20 m²
+                                </span>
+                                <span class="text-xs text-slate-500">đến</span>
+                                <span class="text-sm font-semibold text-gold" id="max-area-display">
+                                    500 m²
+                                </span>
+                            </div>
+
+                            <!-- Area Slider -->
+                            <div id="area-slider" class="my-2"></div>
+
+                            <!-- Hidden inputs for form submission -->
+                            <input type="hidden" id="min-area-input" name="min_area" value="20" />
+                            <input type="hidden" id="max-area-input" name="max_area" value="500" />
+                        </div>
+                    </div>
+
+                    <!-- Floor Range Filter -->
+                    <div class="sm:col-span-1 lg:col-span-2">
+                        <label class="mb-2 block text-xs font-medium text-slate-600">
+                            <i class="fas fa-layer-group mr-1.5 text-[10px] text-navy/70"></i>
+                            Tầng
+                        </label>
+
+                        <div class="px-2">
+                            <div class="mb-2 flex items-center justify-between">
+                                <span class="text-sm font-semibold text-gold" id="min-floor-display">
+                                    1
+                                </span>
+                                <span class="text-xs text-slate-500">đến</span>
+                                <span class="text-sm font-semibold text-gold" id="max-floor-display">
+                                    50
+                                </span>
+                            </div>
+
+                            <!-- Floor Slider -->
+                            <div id="floor-slider" class="my-2"></div>
+
+                            <!-- Hidden inputs for form submission -->
+                            <input type="hidden" id="min-floor-input" name="min_floor" value="1" />
+                            <input type="hidden" id="max-floor-input" name="max_floor" value="50" />
+                        </div>
+                    </div>
+
+                    <!-- Capacity Range Filter -->
+                    <div class="sm:col-span-1 lg:col-span-2">
+                        <label class="mb-2 block text-xs font-medium text-slate-600">
+                            <i class="fas fa-users mr-1.5 text-[10px] text-navy/70"></i>
+                            Sức chứa (người)
+                        </label>
+
+                        <div class="px-2">
+                            <div class="mb-2 flex items-center justify-between">
+                                <span class="text-sm font-semibold text-gold" id="min-capacity-display">
+                                    1
+                                </span>
+                                <span class="text-xs text-slate-500">đến</span>
+                                <span class="text-sm font-semibold text-gold" id="max-capacity-display">
+                                    100
+                                </span>
+                            </div>
+
+                            <!-- Capacity Slider -->
+                            <div id="capacity-slider" class="my-2"></div>
+
+                            <!-- Hidden inputs for form submission -->
+                            <input type="hidden" id="min-capacity-input" name="min_capacity" value="1" />
+                            <input type="hidden" id="max-capacity-input" name="max_capacity" value="100" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-end gap-2.5 pt-2 sm:col-span-2 lg:col-span-4">
+                    <button type="button"
+                        class="rounded-lg border border-slate-300 bg-white px-5 py-2 text-sm font-medium text-slate-700 transition-all duration-200 hover:border-slate-400 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200">
+                        <i class="fas fa-redo mr-1.5 text-xs"></i>
+                        Đặt lại
+                    </button>
+                    <button type="submit"
+                        class="rounded-lg bg-gradient-to-r from-navy to-navy-light px-6 py-2 text-sm font-bold text-white shadow-md transition-all duration-200 hover:scale-105 hover:from-navy-light hover:to-navy hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-navy/30">
+                        <i class="fas fa-search mr-2"></i>Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
