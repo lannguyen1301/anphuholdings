@@ -149,7 +149,6 @@
   </section>
 
   <!-- General information -->
-  <!-- Thông tin chung -->
   <section id="generalInformation" class="py-12 bg-white">
   </section>
 
@@ -250,14 +249,9 @@
   <script src="js/include.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // include Header
       includeHTML("#header", "./partials/common/header.html");
-      // include điều hướng 
       includeHTML("#breadCrumb", "./partials/common/bread-crumb.html", initBreadcrumb);
-
-      // include đánh giá 5 sao 
       includeHTML("#ratingStar", "./partials/common/rating-star.html");
-      // rental building include toà nhà cho thuê quận
       includeHTML("#buildingRental", "./partials/buildingRental/building-rental.html");
       includeHTML("#buildingRentalWard1", "./partials/buildingRental/building-rental-ward-1.html");
       includeHTML("#buildingRentalWard2", "./partials/buildingRental/building-rental-ward-2.html");
@@ -271,20 +265,9 @@
       includeHTML("#buildingRentalWardGoVap", "./partials/buildingRental/building-rental-ward-go-vap.html");
       includeHTML("#buildingRentalWardTanBinh", "./partials/buildingRental/building-rental-ward-tan-binh.html");
       includeHTML("#buildingRentalWardThuDuc", "./partials/buildingRental/building-rental-ward-thu-duc.html");
-
-      // include điều hướng 
-      // includeHTML("#pagination", "./partials/common/pagination.html"); // trang này không dùng
-
-      // Thông tin chung
-      includeHTML("#generalInformation", "./partials/common/general-information.html");
-
-      // include nhân viên tư vấn 
+      includeHTML("#pagination", "./partials/common/pagination.html");
       includeHTML("#consultingTeam", "./partials/common/consulting-team.html");
-
-      // include contact
-      includeHTML("#contact-2", "./partials/common/contact-2.html")
-
-      // include footer
+      includeHTML("#generalInformation", "./partials/common/general-information.html");
       includeHTML("#footer", "./partials/common/footer.html");
     });
   </script>
@@ -349,7 +332,7 @@
   <script src="js/flowbite.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/odometer.js"></script>
-  <script src="js/swip;er-bundle.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/index.js"></script>
 
   <script>
