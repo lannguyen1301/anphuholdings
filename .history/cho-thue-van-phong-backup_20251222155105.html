@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+  <link href="styles/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/odometer-theme-default.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <!-- styles office rental -->
+  <style>
+    /* Bubble hover effect – áp cho thẻ a */
+    .hover-bubble {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: color 0.4s ease-in-out;
+    }
+
+    .hover-bubble::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 100%;
+      bottom: 100%;
+      /* width: 40px; */
+      /* height: 25px; */
+
+      width: 200vmax;
+      height: 100vmax;
+
+      border-radius: 50%;
+      background-color: #ec4899;
+      /* pink-500 */
+      transform-origin: center;
+      /* transform: translate3d(50%, 50%, 0) scale3d(0, 0, 0); */
+      transform: translate3d(50%, 50%, 0) scale(0);
+      transition: transform 0.45s ease-in-out;
+    }
+
+    /* .hover-bubble:hover::before {
+      transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+
+    } */
+
+    .hover-bubble:hover::before {
+      transform: translate3d(50%, 50%, 0) scale(1);
+    }
+  </style>
+  <title>Cho Thuê Văn Phòng Theo Quận</title>
+</head>
+
+<body>
+  <!-- header -->
+  <!-- <header id="header" class="sticky left-0 top-0 z-50 flex h-nav-2 items-center bg-white shadow-sm"></header> -->
+  <!-- Navbar ended -->
+  <section class="bg-primary-10">
+    <div class="h-auto w-full bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/layer.svg')">
+      <div
+        class="container flex h-[225px] flex-col items-center justify-center sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px]">
+        <h1 id="pageTitle" class="common-hero-heading">Cho thuê văn phòng</h1>
+
+        <!-- Breadcrumb -->
+        <div id="breadCrumb" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+          data-aos-duration="500" class="flex" aria-label="Breadcrumb">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Content Started -->
+  <section class="container">
+    <!-- Rating start -->
+    <div id="ratingStar" data-aos="fade-right" class="flex items-center gap-1 mb-4 text-sm text-gray-600">
+    </div>
+
+    <!-- Building rentals by district -->
+    <div id="officeRental"></div>
+
+    <!-- filter -->
+    <div class="flex items-center justify-between">
+      <div class="gap-30 flex items-center">
+        <select id="countries"
+          class="block w-full rounded-lg border-0 bg-white p-2.5 text-sm text-navy shadow-none focus:border-navy focus:ring-navy">
+          <option selected disabled>Default Sort</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+
+        <button>
+          <i class="fa-solid fa-sort text-xl text-navy"></i>
+        </button>
+        <button>
+          <i class="fa-solid fa-globe text-xl text-navy"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- VĂN PHÒNG CHO THUÊ QUẬN 1 -->
+    <section id="officeRentalWard1" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- VĂN PHÒNG CHO THUÊ QUẬN 2 -->
+    <section id="officeRentalWard2" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- VĂN PHÒNG CHO THUÊ QUẬN 3 -->
+    <section id="officeRentalWard3" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 4 -->
+    <section id="officeRentalWard4" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 5 -->
+    <section id="officeRentalWard5" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 6 -->
+    <section id="officeRentalWard6" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 7 -->
+    <section id="officeRentalWard7" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 8 -->
+    <section id="officeRentalWard8" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 9 -->
+    <section id="officeRentalWard9" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 10 -->
+    <section id="officeRentalWard10" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 11 -->
+    <section id="officeRentalWard11" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận 12 -->
+    <section id="officeRentalWard12" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- Văn phòng cho thuê quận Bình Thạnh -->
+    <section id="officeRentalWardBinhThanh" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- VĂN PHÒNG CHO THUÊ QUẬN GÒ VẤP -->
+    <section id="officeRentalWardGoVap" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- VĂN PHÒNG CHO THUÊ QUẬN phú nhuận -->
+    <section id="officeRentalWardPhuNhuan" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- VĂN PHÒNG CHO THUÊ QUẬN Tân Bình -->
+    <section id="officeRentalWardTanBinh" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+
+    <!-- VĂN PHÒNG CHO THUÊ QUẬN Thủ đức -->
+    <section id="officeRentalWardThuDuc" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    </section>
+  </section>
+
+  <!-- Quy trình dịch vụ tư vấn -->
+  <!-- <section id="processConsulting" class="bg-gray-50 py-16">
+  </section> -->
+
+  <!-- maps -->
+  <!-- đang bị sai layout -->
+  <!-- <section class="container mx-auto px-4 xl:px-0 bg-white py-16">
+    <h2 class="text-3xl font-bold text-navy uppercase mt-12 mb-5">
+      Bản đồ các tòa nhà cho thuê văn phòng tại tp.HCM
+    </h2>
+    <div id="map"></div>
+  </section> -->
+
+  <!-- General information -->
+  <!-- <section id="generalInformation" class="py-12 bg-white">
+  </section> -->
+
+  <!-- General information -->
+  <!-- <section id="generalInformation2" class="py-12 bg-white">
+    </section> -->
+
+  <!-- FAQ Section -->
+  <!-- <section id="faq" class="bg-white py-16 md:py-24"></section> -->
+
+  <!-- Tìm thuê văn phòng theo phường mới -->
+  <!-- <section id="officeNewWard" class="container mx-auto px-4 xl:px-0 bg-white py-16">
+  </section> -->
+
+  <!-- Cẩm nang tìm văn phòng -->
+  <!-- <section id="handbook" class="bg-gray-50 container mx-auto px-4 xl:px-0 bg-white py-16">
+  </section> -->
+
+  <!-- Consulting team -->
+  <!-- <section id="consultingTeam" class="py-16 bg-white">
+  </section> -->
+
+  <!-- Contact Section -->
+  <!-- <section id="contact2" class="container max-w-screen-xl mx-auto py-16 overflow-hidden bg-white md:py-24">
+  </section> -->
+
+  <!-- footer -->
+  <!-- <div id="footer"></div> -->
+
+  <!-- include script -->
+  <script src="./js/breadcrumb.js"></script>
+  <script src="js/include.js"></script>
+
+  <!-- include partials -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      includeHTML("#header", "./partials/common/header.html");
+
+      // include breadCrumb
+      includeHTML("#breadCrumb", "./partials/common/bread-crumb.html", initBreadcrumb);
+
+      // include đánh giá 5 sao
+      includeHTML("#ratingStar", "./partials/common/rating-star.html");
+
+      // include navbar văn phòng cho thuê theo quận
+      includeHTML("#officeRental", "./partials/office-rental/office-rental.html");
+
+      // include văn phòng cho thuê quận 1
+      includeHTML("#officeRentalWard1", "./partials/office-rental/office-rental-ward-1.html");
+
+      // include văn phòng cho thuê quận 2
+      includeHTML("#officeRentalWard2", "./partials/office-rental/office-rental-ward-2.html");
+
+      // include văn phòng cho thuê quận 3
+      includeHTML("#officeRentalWard3", "./partials/office-rental/office-rental-ward-3.html");
+
+      // include văn phòng cho thuê quận 4
+      includeHTML("#officeRentalWard4", "./partials/office-rental/office-rental-ward-4.html");
+
+      // include văn phòng cho thuê quận 5
+      includeHTML("#officeRentalWard5", "./partials/office-rental/office-rental-ward-5.html");
+
+      // include văn phòng cho thuê quận 6
+      includeHTML("#officeRentalWard6", "./partials/office-rental/office-rental-ward-6.html");
+
+      // include văn phòng cho thuê quận 7
+      includeHTML("#officeRentalWard7", "./partials/office-rental/office-rental-ward-7.html");
+
+      // include văn phòng cho thuê quận 8
+      includeHTML("#officeRentalWard8", "./partials/office-rental/office-rental-ward-8.html");
+
+      // include văn phòng cho thuê quận 9
+      includeHTML("#officeRentalWard9", "./partials/office-rental/office-rental-ward-9.html");
+
+      // include văn phòng cho thuê quận 10
+      includeHTML("#officeRentalWard10", "./partials/office-rental/office-rental-ward-10.html");
+
+      // include văn phòng cho thuê quận 11
+      includeHTML("#officeRentalWard11", "./partials/office-rental/office-rental-ward-11.html");
+
+      // include văn phòng cho thuê quận 12
+      includeHTML("#officeRentalWard12", "./partials/office-rental/office-rental-ward-12.html");
+
+      // include văn phòng cho thuê quận Binh Thanh
+      includeHTML("#officeRentalWardBinhThanh", "./partials/office-rental/office-rental-ward-binh-thanh.html");
+
+      // include văn phòng cho thuê quận Phu Nhuan
+      includeHTML("#officeRentalWardPhuNhuan", "./partials/office-rental/office-rental-ward-phu-nhuan.html");
+
+      // include văn phòng cho thuê quận Go vap
+      includeHTML("#officeRentalWardGovap", "./partials/office-rental/office-rental-ward-go-vap.html");
+
+      // include văn phòng cho thuê quận TanBinh
+      includeHTML("#officeRentalWardTanBinh", "./partials/office-rental/office-rental-ward-tan-binh.html");
+
+      // include văn phòng cho thuê quận Thu Duc
+      includeHTML("#officeRentalWardThuDuc", "./partials/office-rental/office-rental-ward-thu-duc.html");
+
+      // include QUY TRÌNH DỊCH VỤ TƯ VẤN
+      includeHTML("#processConsulting", "./partials/office-rental/process-consulting.html");
+
+      // include maps
+      includeHTML("#map", "./partials/maps/map-1.html");
+
+      // include điều hướng
+      // includeHTML("#pagination", "./partials/common/pagination.html");
+
+      // include team tư vấn
+      includeHTML("#consultingTeam", "./partials/common/consulting-team.html");
+
+      // include thông tin chung
+      includeHTML("#generalInformation", "./partials/common/general-information.html");
+
+      // includeHTML("#generalInformation2", "./partials/office-rental/general-information.html");
+
+      // include cẩm nan - gợi ý nên di chuyển ra thư mục common mới đúng  includeHTML("#handbook", "./partials/common/handbook.html");
+      includeHTML("#handbook", "./partials/office-rental/handbook.html");
+
+      // include văn phòng cho thuê theo phường mới
+      includeHTML("#officeNewWard", "./partials/office-rental/office-new-ward.html");
+
+      // include câu hỏi thường gặp
+      includeHTML("#faq", "./partials/common/faq.html");
+
+      // include liên hệ
+      includeHTML("#contact2", "./partials/common/contact-2.html");
+
+      // include footer
+      includeHTML("#footer", "./partials/common/footer.html");
+    });
+  </script>
+
+  <script>
+    function toggleFaq(button) {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('i');
+
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+        button.classList.add('bg-blue-50');
+      } else {
+        answer.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+        button.classList.remove('bg-blue-50');
+      }
+    }
+  </script>
+
+  <!--  -->
+  <script>
+    function toggleFullInfo() {
+      const fullContent = document.getElementById('info-full');
+      const btnText = document.getElementById('btnText');
+      const btnIcon = document.getElementById('btnIcon');
+      const btn = document.getElementById('toggleInfoBtn');
+
+      if (fullContent.classList.contains('hidden')) {
+        // Mở nội dung
+        fullContent.classList.remove('hidden');
+        btnText.textContent = 'Thu gọn';
+        btnIcon.classList.remove('fa-chevron-down');
+        btnIcon.classList.add('fa-chevron-up');
+
+        // Scroll nhẹ xuống để người dùng biết đã mở (tuỳ chọn)
+        // fullContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Đóng nội dung
+        fullContent.classList.add('hidden');
+        btnText.textContent = 'Xem thêm';
+        btnIcon.classList.remove('fa-chevron-up');
+        btnIcon.classList.add('fa-chevron-down');
+
+        // Scroll lại lên đầu section
+        document.getElementById('general-info-section').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="js/fontawesome.min.js"></script>
+  <script src="js/flowbite.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/odometer.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    AOS.init({
+      delay: 0,
+      duration: 1000,
+    });
+
+    // reviews
+    const swiper = new Swiper('.h2-reviews-swiper', {
+      slidesPerView: 3,
+      pagination: {
+        el: '.h2-reviews-swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+
+    // agent
+    const agent = new Swiper('.h2-agent-swiper', {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+
+    function initPhuongSwiper() {
+      const el = document.querySelector('.phuong-swiper');
+      if (!el || el.classList.contains('swiper-initialized')) return;
+
+      new Swiper(el, {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        loop: true,
+        speed: 800,
+        grabCursor: true,
+
+        navigation: {
+          nextEl: '.phuong-swiper-button-next',
+          prevEl: '.phuong-swiper-button-prev',
+        },
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+
+        breakpoints: {
+          0: { slidesPerView: 1, spaceBetween: 16 },
+          640: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 24 },
+          1280: { slidesPerView: 4, spaceBetween: 24 },
+        },
+      });
+    }
+
+
+    // Team Swiper
+    function initTeamSwiper() {
+      const el = document.querySelector('.team-swiper');
+
+      if (!el) return;
+
+      // chống init trùng
+      if (el.classList.contains('swiper-initialized')) return;
+
+      new Swiper(el, {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        loop: true,
+        speed: 800,
+        grabCursor: true,
+
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+
+        breakpoints: {
+          0: { slidesPerView: 1, spaceBetween: 16 },
+          640: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 24 },
+          1280: { slidesPerView: 4, spaceBetween: 24 },
+        },
+      });
+    }
+  </script>
+
+  <!-- noUiSlider CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.6.1/dist/nouislider.min.js"></script>
+
+  <script>
+    // Slider diện tích
+    const areaSlider = document.getElementById('areaSlider');
+    noUiSlider.create(areaSlider, {
+      start: [100, 1000], // giá trị mặc định
+      connect: true,
+      range: {
+        min: 10,
+        max: 2000
+      },
+      step: 10,
+      tooltips: true,
+      format: {
+        to: value => Math.round(value),
+        from: value => Number(value)
+      }
+    });
+
+    const areaMinVal = document.getElementById('areaMinVal');
+    const areaMaxVal = document.getElementById('areaMaxVal');
+    areaSlider.noUiSlider.on('update', (values) => {
+      areaMinVal.textContent = values[0];
+      areaMaxVal.textContent = values[1];
+    });
+
+    // Slider giá thuê
+    const priceSlider = document.getElementById('priceSlider');
+    noUiSlider.create(priceSlider, {
+      start: [20, 50], // giá trị mặc định
+      connect: true,
+      range: {
+        min: 8,
+        max: 65
+      },
+      step: 1,
+      tooltips: true,
+      format: {
+        to: value => Math.round(value),
+        from: value => Number(value)
+      }
+    });
+
+    const priceMinVal = document.getElementById('priceMinVal');
+    const priceMaxVal = document.getElementById('priceMaxVal');
+    priceSlider.noUiSlider.on('update', (values) => {
+      priceMinVal.textContent = values[0];
+      priceMaxVal.textContent = values[1];
+    });
+  </script>
+
+  <script>
+    function toggleSeoContent() {
+      const content = document.getElementById('seo-content');
+      const gradient = document.getElementById('seo-gradient');
+      const btnText = document.getElementById('seo-btn-text');
+      const btnIcon = document.getElementById('seo-btn-icon');
+
+      if (content.classList.contains('max-h-24')) {
+        content.classList.replace('max-h-24', 'max-h-[1000px]');
+        gradient.classList.add('hidden');
+        btnText.textContent = 'Thu gọn';
+        btnIcon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+      } else {
+        content.classList.replace('max-h-[1000px]', 'max-h-24');
+        gradient.classList.remove('hidden');
+        btnText.textContent = 'Xem thêm';
+        btnIcon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+      }
+    }
+  </script>
+</body>
+
+</html>
