@@ -47,7 +47,7 @@ function initAfterInclude() {
     }
 
     if (typeof initUsersRating === 'function') {
-      initUsersRating();
+      initRangeSlider();
     }
   });
 }

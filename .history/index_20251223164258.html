@@ -283,7 +283,7 @@
 
   <!-- User Reviews Start -->
   <section id="usersReview"
-    class="section-padding container flex max-w-[1170px] flex-col items-center justify-center overflow-hidden px-3 2xl:px-0">
+    class="h2-reviews-swiper section-padding container flex max-w-[1170px] flex-col items-center justify-center overflow-hidden px-3 2xl:px-0">
   </section>
   <!-- User Reviews End -->
 
@@ -306,6 +306,13 @@
   <!-- footer -->
   <div id="footer"></div>
 
+  <!-- include script -->
+  <script src="./js/breadcrumb.js"></script>
+
+  <!-- file init swiper riêng -->
+  <script src="js/users-rating-swiper.js"></script>
+
+  <script src="js/include.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       includeHTML("#header", "./partials/common/header.html");
@@ -395,14 +402,6 @@
       },
     });
   </script>
-
-  <!-- include script -->
-  <script src="./js/breadcrumb.js"></script>
-
-  <!-- file init swiper riêng -->
-  <script src="js/users-rating-swiper.js"></script>
-
-  <script src="js/include.js"></script>
 </body>
 
 </html>

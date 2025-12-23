@@ -283,7 +283,7 @@
 
   <!-- User Reviews Start -->
   <section id="usersReview"
-    class="section-padding container flex max-w-[1170px] flex-col items-center justify-center overflow-hidden px-3 2xl:px-0">
+    class="h2-reviews-swiper section-padding container flex max-w-[1170px] flex-col items-center justify-center overflow-hidden px-3 2xl:px-0">
   </section>
   <!-- User Reviews End -->
 
@@ -306,6 +306,14 @@
   <!-- footer -->
   <div id="footer"></div>
 
+  <!-- include script -->
+  <!-- include script -->
+  <script src="./js/breadcrumb.js"></script>
+
+  <!-- file init swiper riêng -->
+  <script src="js/users-raiting-swiper.js"></script>
+
+  <script src="js/include.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       includeHTML("#header", "./partials/common/header.html");
@@ -341,36 +349,36 @@
     });
 
     // reviews
-    // const swiper = new Swiper('.h2-reviews-swiper', {
-    //   slidesPerView: 3,
-    //   pagination: {
-    //     el: '.h2-reviews-swiper-pagination',
-    //     clickable: true,
-    //     dynamicBullets: true,
-    //   },
-    //   autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    //   },
-    //   breakpoints: {
-    //     0: {
-    //       slidesPerView: 1,
-    //       spaceBetween: 10,
-    //     },
-    //     320: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 10,
-    //     },
-    //     640: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 15,
-    //     },
-    //     768: {
-    //       slidesPerView: 3,
-    //       spaceBetween: 20,
-    //     },
-    //   },
-    // });
+    const swiper = new Swiper('.h2-reviews-swiper', {
+      slidesPerView: 3,
+      pagination: {
+        el: '.h2-reviews-swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
 
     // agent
     const agent = new Swiper('.h2-agent-swiper', {
@@ -395,14 +403,6 @@
       },
     });
   </script>
-
-  <!-- include script -->
-  <script src="./js/breadcrumb.js"></script>
-
-  <!-- file init swiper riêng -->
-  <script src="js/users-rating-swiper.js"></script>
-
-  <script src="js/include.js"></script>
 </body>
 
 </html>
