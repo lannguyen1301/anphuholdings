@@ -1,4 +1,4 @@
-<div class="mx-auto px-4 xl:px-0">
+<!-- <div class="mx-auto px-4 xl:px-0">
     <div class="mx-auto mb-12 max-w-4xl text-center" data-aos="fade-up">
         <p class="mb-4 text-sm font-medium uppercase tracking-wide text-primary">
             Tại Sao AN PHU HOLDINGS Là Lựa Chọn Hàng Đầu
@@ -49,48 +49,34 @@
             </div>
         </div>
     </div>
-</div>
-
-
-<!-- Stats Cards Grid -->
-<!-- <div class="mb-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
-    <div
-        class="group flex h-full min-h-[140px] flex-col items-center justify-center rounded-2xl bg-primary p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white">
-            ✓
-        </div>
-        <p class="text-base font-semibold leading-snug text-white">
-            Tìm văn phòng thật đơn giản
-        </p>
-    </div>
-
-    <div
-        class="group flex h-full min-h-[140px] flex-col items-center justify-center rounded-2xl bg-primary p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white">
-            ✓
-        </div>
-        <p class="text-base font-semibold leading-snug text-white">
-            Giải pháp minh bạch, dễ dàng so sánh
-        </p>
-    </div>
-
-    <div
-        class="group flex h-full min-h-[140px] flex-col items-center justify-center rounded-2xl bg-primary p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white">
-            ✓
-        </div>
-        <p class="text-base font-semibold leading-snug text-white">
-            Thiết kế văn phòng chuyên nghiệp
-        </p>
-    </div>
-
-    <div
-        class="group flex h-full min-h-[140px] flex-col items-center justify-center rounded-2xl bg-primary p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white">
-            ✓
-        </div>
-        <p class="text-base font-semibold leading-snug text-white">
-            Tiết kiệm 30% chi phí đầu tư
-        </p>
-    </div>
 </div> -->
+
+<!-- USP Card - Uiverse inspired -->
+<div class="group relative h-[180px] cursor-pointer overflow-hidden rounded-3xl bg-primary p-6 text-white">
+    <!-- peer trigger -->
+    <div class="peer absolute inset-0 z-10"></div>
+
+    <!-- Blob background -->
+    <div class="absolute -top-24 -left-20 h-40 w-40 rounded-full bg-white/10 transition-all duration-500
+           peer-hover:-top-16 peer-hover:-left-10 peer-hover:h-[140%] peer-hover:w-[140%]"></div>
+
+    <!-- Hover content -->
+    <div
+        class="absolute -bottom-24 -right-20 flex h-40 w-40 items-end justify-end rounded-full bg-white/10 p-6 text-center text-sm font-medium transition-all duration-500
+           peer-hover:bottom-0 peer-hover:right-0 peer-hover:h-full peer-hover:w-full peer-hover:rounded-none peer-hover:items-center peer-hover:justify-center">
+        <span class="leading-snug">
+            Tư vấn minh bạch<br />
+            dễ dàng so sánh
+        </span>
+    </div>
+
+    <!-- Default content -->
+    <div class="relative z-20 flex h-full flex-col items-center justify-center text-center">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-lg font-bold">
+            ✓
+        </div>
+        <p class="text-base font-semibold leading-snug">
+            Giải pháp minh bạch
+        </p>
+    </div>
+</div>
