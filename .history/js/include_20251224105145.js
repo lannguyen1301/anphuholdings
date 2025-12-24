@@ -95,13 +95,8 @@ function initAfterInclude() {
   }
 
   /* ===== AOS ===== */
-  if (window.AOS && !window.__AOS_INITED__) {
-    window.__AOS_INITED__ = true;
-    AOS.init({
-      delay: 0,
-      duration: 1000,
-      // once: true,
-    });
+  if (window.AOS) {
+    AOS.refreshHard();
   }
 
   /* ===== Component phụ thuộc layout ===== */

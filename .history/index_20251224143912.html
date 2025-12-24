@@ -16,6 +16,13 @@
 </head>
 
 <body>
+
+  <!-- header -->
+  <header id="header" class="sticky left-0 top-0 z-50 flex h-nav-2 items-center bg-white shadow-sm">
+
+  </header>
+  <!-- test -->
+
   <!-- header -->
   <header id="header" class="sticky left-0 top-0 z-50 flex h-nav-2 items-center bg-white shadow-sm"></header>
 
@@ -142,7 +149,6 @@
       <!-- Hero Ended -->
     </div>
   </div>
-
   <!-- about started -->
   <section id="about"
     class="section-padding-120-t container grid gap-4 px-4 md:gap-7 lg:grid-cols-2 lg:gap-9 xl:gap-12 xl:px-0 2xl:gap-[60px]">
@@ -314,6 +320,67 @@
   <script src="js/odometer.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/index.js"></script>
+  <script>
+    AOS.init({
+      delay: 0,
+      duration: 1000,
+    });
+
+    // reviews
+    // const swiper = new Swiper('.h2-reviews-swiper', {
+    //   slidesPerView: 3,
+    //   pagination: {
+    //     el: '.h2-reviews-swiper-pagination',
+    //     clickable: true,
+    //     dynamicBullets: true,
+    //   },
+    //   autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    //   },
+    //   breakpoints: {
+    //     0: {
+    //       slidesPerView: 1,
+    //       spaceBetween: 10,
+    //     },
+    //     320: {
+    //       slidesPerView: 2,
+    //       spaceBetween: 10,
+    //     },
+    //     640: {
+    //       slidesPerView: 2,
+    //       spaceBetween: 15,
+    //     },
+    //     768: {
+    //       slidesPerView: 3,
+    //       spaceBetween: 20,
+    //     },
+    //   },
+    // });
+
+    // agent
+    // const agent = new Swiper('.h2-agent-swiper', {
+    //   slidesPerView: 3,
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    //   breakpoints: {
+    //     0: {
+    //       slidesPerView: 1,
+    //       spaceBetween: 10,
+    //     },
+    //     768: {
+    //       slidesPerView: 2,
+    //       spaceBetween: 20,
+    //     },
+    //     1024: {
+    //       slidesPerView: 3,
+    //       spaceBetween: 30,
+    //     },
+    //   },
+    // });
+  </script>
 
   <!-- include script -->
   <!-- <script src="./js/breadcrumb.js"></script> -->
